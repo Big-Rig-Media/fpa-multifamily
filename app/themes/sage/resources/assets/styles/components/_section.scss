@@ -1,0 +1,117 @@
+// Section
+.brm-section {
+  @apply py-8;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply py-16;
+  }
+
+  // White Background Specific
+  &.bg-white {
+    @apply text-black;
+  }
+
+  // Primary Backgrounds Specific
+  &.bg-primary-1,
+  &.bg-primary-2 {
+    @apply text-white;
+  }
+
+  // Background Loaded
+  &.has-loaded {
+    @apply text-white bg-center bg-no-repeat bg-cover;
+  }
+}
+
+// Split
+.brm-section--split {
+  @apply py-0;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply flex flex-row flex-no-wrap justify-between;
+  }
+}
+
+// Background, Content & Map
+.brm-section__bg,
+.brm-section__content,
+.brm-section__map {
+  // 1024
+  @media (min-width: 1024px) {
+    @apply w-1/2;
+  }
+}
+
+// Background
+.brm-section__bg {
+  // Has Loaded
+  &.has-loaded {
+    @apply min-h-mobile:split bg-center bg-no-repeat bg-cover;
+
+    // 1024
+    @media (min-width: 1024px) {
+      @apply min-h-split;
+    }
+  }
+
+  // Is Flipped
+  .flip & {
+    // 1024
+    @media (min-width: 1024px) {
+      order: 2;
+    }
+  }
+}
+
+// Content
+.brm-section__content {
+  @apply px-base py-10;
+
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply text-center;
+  }
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply px-10;
+
+    // Splash Specific
+    .page-template-template-splash & {
+      @apply py-32;
+    }
+  }
+
+  // Is Flipped
+  .flip & {
+    // 1024
+    @media (min-width: 1024px) {
+      order: 1;
+    }
+  }
+}
+
+// Content Inner
+.brm-section__inner {
+  // 1200
+  @media (min-width: 1200px) {
+    @apply max-w-inner ml-0 mr-auto;
+
+    // Is Flipped
+    .flip & {
+      @apply mr-0 ml-auto;
+    }
+
+    // Meta Specific
+    .brm-section--meta & {
+      @apply mr-0 ml-auto;
+    }
+  }
+}
+
+// Header
+.brm-section__header {
+  @apply text-center;
+}

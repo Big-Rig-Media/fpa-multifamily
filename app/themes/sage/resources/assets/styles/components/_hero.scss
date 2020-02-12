@@ -1,0 +1,89 @@
+// Hero
+.brm-hero {
+  @apply relative overflow-hidden;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply h-screen max-h-hero;
+  }
+
+  // Home Specific
+  .page-template-template-home & {
+    // 1024
+    @media (min-width: 1024px) {
+      @apply max-h-hero-home;
+    }
+  }
+
+  // Splash Specific
+  .page-template-template-splash & {
+    @apply flex flex-col flex-wrap items-center justify-center;
+
+    // 1024
+    @media (min-width: 1024px) {
+      @apply max-h-hero-splash;
+    }
+  }
+
+  // Landing Specific
+  .page-template-template-landing & {
+    // 1023 <=
+    @media (max-width: 1023px) {
+      @apply h-auto max-h-initial;
+    }
+
+    // 1024
+    @media (min-width: 1024px) {
+      @apply flex flex-col flex-wrap items-center justify-center max-h-hero-home;
+    }
+  }
+
+  // Has Background
+  &.has-bg {
+    @apply bg-center bg-no-repeat bg-cover;
+
+    // 1023 <=
+    @media (max-width: 1023px) {
+      @apply py-16;
+    }
+  }
+}
+
+// Video
+.brm-hero__video {
+  @apply absolute pin w-full h-full;
+
+  object-fit: cover;
+}
+
+// Carousel
+.brm-hero__carousel {
+  @apply w-full h-full;
+}
+
+// Carousel Image
+.brm-hero__carousel__image {
+  // Has Loaded
+  &.has-loaded {
+    @apply w-screen h-screen max-h-hero bg-center bg-no-repeat bg-cover;
+
+    // 1024
+    @media (min-width: 1024px) {
+      @apply max-h-hero-home;
+    }
+  }
+}
+
+// Content & Form
+.brm-hero__content,
+.brm-hero__form {
+  // Landing Specific
+  .page-template-template-landing & {
+    @apply w-full;
+
+    // 1024
+    @media (min-width: 1024px) {
+      width: calc(50% - 15px);
+    }
+  }
+}

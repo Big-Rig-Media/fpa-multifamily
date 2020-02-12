@@ -1,0 +1,24 @@
+// Alert
+.brm-alert {
+  @apply p-4 mt-8 text-black leading-normal;
+}
+
+// Success Alert
+.brm-alert--success {
+  @apply bg-green-lightest;
+}
+
+// Info Alert
+.brm-alert--info {
+  @apply bg-blue-lightest;
+}
+
+// Warning Alert
+.brm-alert--warning {
+  @apply bg-yellow-lightest;
+}
+
+// Error Alert
+.brm-alert--error {
+  @apply bg-red-lightest;
+}

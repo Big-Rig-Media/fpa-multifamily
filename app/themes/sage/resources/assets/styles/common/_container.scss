@@ -1,0 +1,26 @@
+// Container
+.brm-container {
+  @apply w-full max-w-4xl mx-auto px-base;
+}
+
+// Flex
+.brm-container--flex-center {
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply text-center;
+  }
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply flex flex-row flex-no-wrap items-center justify-between;
+
+    * {
+      @apply mb-0;
+    }
+  }
+}
+
+// Flex Spread
+.brm-container--flex-spread {
+  @apply flex flex-row flex-wrap items-center justify-between relative;
+}

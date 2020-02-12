@@ -1,0 +1,28 @@
+// Button
+.brm-btn {
+  @apply inline-block py-2 px-5 text-lg font-roboto-medium text-white no-underline uppercase border-0;
+}
+
+// Primary
+.brm-btn--primary {
+  @apply bg-primary-1;
+
+  // Hover State
+  @media (hover: hover) {
+    &:hover {
+      @apply bg-primary-2;
+    }
+  }
+}
+
+// Secondary
+.brm-btn--secondary {
+  @apply bg-primary-2;
+
+  // Hover State
+  @media (hover: hover) {
+    &:hover {
+      @apply bg-primary-1;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+body {
+  @apply font-roboto-regular text-white bg-primary-1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // Open State Navigation
+  &.nav-is-open {
+    @apply overflow-hidden;
+  }
+}
+
+ol:not([class]),
+ul:not([class]) {
+  @apply pl-10;
+}
+
+li:not([class]) + li:not([class]) {
+  @apply mt-2;
+}
+
+hr {
+  @apply block h-px my-8 bg-white;
+
+  clear: both;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply my-16;
+  }
+}
+
+address {
+  @apply roman leading-normal;
+
+  span:first-child {
+    @apply block;
+  }
+}
+
+iframe {
+  @apply block;
+}
+
+input,
+textarea,
+select, {
+  @apply w-full p-2 text-lg text-black leading-normal border border-solid border-grey appearance-none;
+}
+
+textarea {
+  @apply h-32;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  @apply opacity-75;
+}

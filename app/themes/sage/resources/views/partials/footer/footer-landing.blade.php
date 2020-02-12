@@ -1,0 +1,3 @@
+@if( $copyright )
+  {!! $copyright !!}
+@endif

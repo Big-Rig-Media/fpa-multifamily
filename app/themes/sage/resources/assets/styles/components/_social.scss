@@ -1,0 +1,23 @@
+// Social Links
+.brm-social {
+  @apply flex flex-row items-center mb-10;
+
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply flex-wrap justify-center;
+  }
+}
+
+// Social Link
+.brm-social__link {
+  @apply flex flex-row flex-no-wrap items-center;
+
+  svg {
+    @apply w-auto h-8 fill-white;
+  }
+}
+
+// Adjacent Social Links
+.brm-social__link + .brm-social__link {
+  @apply ml-5;
+}

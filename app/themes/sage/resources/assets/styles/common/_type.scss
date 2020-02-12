@@ -1,0 +1,62 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-5 font-roboto-black font-normal leading-normal;
+}
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+h5 {
+  @apply text-xl;
+}
+
+h6 {
+  @apply text-lg;
+}
+
+p,
+li:not([class]),
+address {
+  @apply text-lg leading-normal;
+}
+
+p {
+  @apply mb-8;
+}
+
+p:last-child {
+  @apply mb-0;
+}
+
+strong,
+b,
+em,
+i {
+  @apply font-normal;
+}
+
+strong,
+b {
+  @apply font-roboto-bold;
+}
+
+a:not([class]) {
+  @apply text-current;
+}

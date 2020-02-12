@@ -1,0 +1,37 @@
+// Footer
+.brm-footer {
+  @apply py-8 text-white;
+
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply text-center;
+  }
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply py-16;
+  }
+
+  // Splash Specific
+  .page-template-template-splash & {
+    @apply text-center;
+  }
+}
+
+// Copyright
+.brm-footer__copyright {
+  @apply mb-0 text-sm;
+}
+
+// Creator
+.brm-footer__creator {
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply block;
+  }
+}
+
+// Link
+.brm-footer__link {
+  @apply text-current no-underline;
+}
