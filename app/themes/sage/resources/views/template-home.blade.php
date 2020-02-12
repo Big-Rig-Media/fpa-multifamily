@@ -6,5 +6,7 @@
 
 @section('content')
   @include('partials.sections.section-intro')
-  @include('partials.sections.section-builder')
+  @include('partials.sections.section-acquisitions')
+  @include('partials.sections.section-dispositions')
+  @include('partials.sections.section-news')
 @endsection

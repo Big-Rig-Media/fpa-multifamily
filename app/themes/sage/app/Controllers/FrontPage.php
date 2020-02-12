@@ -11,5 +11,45 @@ use Sober\Controller\Controller;
  */
 class FrontPage extends Controller
 {
+    public function acquisitions()
+    {
+        $query = new \WP_Query([
+            'post_type'         => 'acquisitions',
+            'posts_per_page'    => 12
+        ]);
 
+        if ( $query->have_posts() ) {
+            return $query->posts;
+        }
+
+        return;
+    }
+
+    public function dispositions()
+    {
+        $query = new \WP_Query([
+            'post_type'         => 'dispositions',
+            'posts_per_page'    => 12
+        ]);
+
+        if ( $query->have_posts() ) {
+            return $query->posts;
+        }
+
+        return;
+    }
+
+    public function posts()
+    {
+        $query = new \WP_Query([
+            'post_type'         => 'post',
+            'posts_per_page'    => 6
+        ]);
+
+        if ( $query->have_posts() ) {
+            return $query->posts;
+        }
+
+        return;
+    }
 }

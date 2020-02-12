@@ -1,0 +1,20 @@
+.carousel-grid {
+  @apply relative;
+
+  &::before,
+  &::after {
+    @apply block absolute pin-t z-40 h-full;
+
+    content: "";
+    width: 15%;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  &::before {
+    @apply pin-l;
+  }
+
+  &::after {
+    @apply pin-r;
+  }
+}

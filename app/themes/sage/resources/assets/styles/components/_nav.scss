@@ -47,7 +47,7 @@
   .brm-nav & {
     // 1024
     @media (min-width: 1024px) {
-      @apply flex flex-row flex-no-wrap items-center;
+      @apply flex flex-row flex-no-wrap items-center justify-center;
     }
   }
 
@@ -84,7 +84,7 @@
   a {
     // Global
     .brm-nav & {
-      @apply font-roboto-medium text-white no-underline;
+      @apply font-muliregular no-underline uppercase;
     }
   }
 }

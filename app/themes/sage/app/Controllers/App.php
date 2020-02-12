@@ -215,4 +215,34 @@ class App extends Controller
     public function copyright() {
         return '<p class="brm-footer__copyright">&copy '.date('Y').' '.self::siteName().'. <span class="brm-footer__creator">Website by <a class="brm-footer__link" href="https://bigrigmedia.com">Big Rig Media LLC</a> &reg;</span></p>';
     }
+
+    /**
+     * Get specified image
+     *
+     * @param   int     $post
+     * @param   string  $size
+     */
+    public static function image( $id, $size )
+    {
+        if ( $id && $size ) {
+            $featured = wp_get_attachment_image_src( get_post_thumbnail_id($id), $size )[0];
+
+            switch ($size) {
+                case 'w596x454':
+                    $placeholder = \App\asset_path('images/placeholders/596x454.png');
+                break;
+                case 'w298x227':
+                    $placeholder = \App\asset_path('images/placeholders/298x227.png');
+                break;
+                default:
+                break;
+            }
+
+            $image = has_post_thumbnail($id) ? $featured : $placeholder;
+
+            return $image;
+        }
+
+        return;
+    }
 }

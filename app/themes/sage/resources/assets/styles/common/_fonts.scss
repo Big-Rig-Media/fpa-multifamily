@@ -233,3 +233,13 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "muliregular";
+  src:
+    url("../fonts/muli/muli-webfont.woff2") format("woff2"),
+    url("../fonts/muli/muli-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

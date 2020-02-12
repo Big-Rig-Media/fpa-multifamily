@@ -24,3 +24,8 @@
 .brm-container--flex-spread {
   @apply flex flex-row flex-wrap items-center justify-between relative;
 }
+
+// Flex Stack
+.brm-container--flex-stack {
+  @apply flex flex-col flex-wrap relative;
+}

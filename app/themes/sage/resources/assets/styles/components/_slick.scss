@@ -1,0 +1,26 @@
+.slick-dots {
+  @apply flex flex-row flex-no-wrap items-start h-slick-dots mb-5 pl-0 border border-solid border-grey-light overflow-hidden rounded-lg;
+
+  list-style-type: none;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply max-w-half mx-auto;
+  }
+
+  li {
+    @apply w-1/2 h-full;
+  }
+
+  button {
+    @apply w-full h-full bg-white overflow-hidden;
+
+    text-indent: -9999px;
+  }
+
+  .slick-active {
+    button {
+      @apply bg-primary-1;
+    }
+  }
+}

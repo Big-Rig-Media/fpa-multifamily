@@ -44,8 +44,13 @@ View the full documentation at https://tailwindcss.com.
 */
 
 let colors = {
-  'primary-1': '#e15f41',
-  'primary-2': '#303952',
+  'primary-1': '#1c3d69',
+  'primary-2': '#a38242',
+
+  'accent-1': '#afcbb9',
+  'accent-2': '#d6c3a5',
+  'accent-3': '#f6d6ca',
+  'accent-4': '#345c97',
 
   'transparent': 'transparent',
 
@@ -54,7 +59,7 @@ let colors = {
   'grey-darker': '#606f7b',
   'grey-dark': '#8795a1',
   'grey': '#b8c2cc',
-  'grey-light': '#dae1e7',
+  'grey-light': '#dfdfdf',
   'grey-lighter': '#f1f5f8',
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
@@ -310,7 +315,14 @@ module.exports = {
       'Helvetica',
       'Arial',
       'serif',
-    ]
+    ],
+    muliregular: [
+      'muliregular',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
   },
 
 
@@ -338,11 +350,11 @@ module.exports = {
     'sm': '.875rem',    // 14px
     'base': '1rem',     // 16px
     'lg': '1.125rem',   // 18px
-    'xl': '1.25rem',    // 20px
-    '2xl': '1.5rem',    // 24px
-    '3xl': '1.875rem',  // 30px
+    'xl': '1.3125rem',  // 21px
+    '2xl': '1.3125rem', // 21px
+    '3xl': '1.5rem',    // 24px
     '4xl': '2.25rem',   // 36px
-    '5xl': '3rem',      // 48px
+    '5xl': '3.6875rem', // 59px
   },
 
 
@@ -528,6 +540,7 @@ module.exports = {
     default: '.25rem',
     'lg': '.5rem',
     'full': '9999px',
+    'button': '2px'
   },
 
 
@@ -617,7 +630,8 @@ module.exports = {
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
-    'screen': '100vh'
+    'screen': '100vh',
+    'slick-dots': '6px'
   },
 
 
@@ -691,6 +705,7 @@ module.exports = {
     '5xl': '100rem',
     'full': '100%',
     'inner': '640px',
+    'half': '50%'
   },
 
 
