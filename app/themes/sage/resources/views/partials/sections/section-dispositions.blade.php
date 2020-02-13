@@ -2,7 +2,7 @@
   <section class="brm-section brm-section--dispositions">
     <div class="text-center brm-container">
       <h2>Recent Dispositions</h2>
-      <div class="-mx-1 carousel-grid js-carousel-dispositions">
+      <div class="-mx-base md:-mx-1 carousel-grid js-carousel-default">
         @foreach( $dispositions as $disposition )
           <div class="mb-5 px-1">
             @if( App::image($disposition->ID, 'w596x454') )

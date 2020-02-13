@@ -6,8 +6,13 @@
     @apply block absolute pin-t z-40 h-full;
 
     content: "";
-    width: 15%;
+    width: 5%;
     background-color: rgba(255, 255, 255, 0.8);
+
+    // 1024
+    @media (min-width: 1024px) {
+      width: 15%;
+    }
   }
 
   &::before {

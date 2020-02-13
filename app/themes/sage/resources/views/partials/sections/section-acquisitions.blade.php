@@ -2,7 +2,7 @@
   <section class="brm-section brm-section--acquisitions">
     <div class="text-center brm-container">
       <h2>Recent Acquisitions</h2>
-      <div class="-mx-1 carousel-grid js-carousel-acquisitions">
+      <div class="-mx-base md:-mx-1 carousel-grid js-carousel-default">
         @foreach( $acquisitions as $acquisition )
           <div class="mb-5 px-1">
             @if( App::image($acquisition->ID, 'w596x454') )

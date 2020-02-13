@@ -6,6 +6,7 @@
           <div>
             @if( App::image($employee->ID, 'w246x272') )
               <img
+                class="border border-solid border-primary-2 rounded-team-card"
                 loading="lazy"
                 srcset="{{ App::image($employee->ID, 'w246x272') }} 246w, {{ App::image($employee->ID, 'w492x544') }} 492w"
                 sizes="(max-width: 767px) 246px, 492px"

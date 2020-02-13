@@ -213,7 +213,8 @@ class App extends Controller
      * @return  string  The default copyright
      */
     public function copyright() {
-        return '<p class="brm-footer__copyright">&copy '.date('Y').' '.self::siteName().'. <span class="brm-footer__creator">Website by <a class="brm-footer__link" href="https://bigrigmedia.com">Big Rig Media LLC</a> &reg;</span></p>';
+        return '<p class="mb-3 text-xs font-mulilight">&copy '.date('Y').' '.self::siteName().'. All Rights Reserved.</p>
+                <p class="text-xs font-mulilight">Investment Advisory Services offered through FPA Real Estate Advisers Group, LLC an afiliate of FPA Multi Family, LLC an SEC Registered Investment Adviser. Please see important disclaimers.</p>';
     }
 
     /**

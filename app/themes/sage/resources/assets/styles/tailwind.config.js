@@ -46,6 +46,7 @@ View the full documentation at https://tailwindcss.com.
 let colors = {
   'primary-1': '#1c3d69',
   'primary-2': '#a38242',
+  'primary-3': '#0f1f33',
 
   'accent-1': '#afcbb9',
   'accent-2': '#d6c3a5',
@@ -57,7 +58,7 @@ let colors = {
   'black': '#22292f',
   'grey-darkest': '#3d4852',
   'grey-darker': '#606f7b',
-  'grey-dark': '#8795a1',
+  'grey-dark': '#76787a',
   'grey': '#b8c2cc',
   'grey-light': '#dfdfdf',
   'grey-lighter': '#f1f5f8',
@@ -337,8 +338,22 @@ module.exports = {
       'Arial',
       'serif',
     ],
+    mulilight: [
+      'mulilight',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
     poyntertextbold: [
       'poyntertextbold',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
+    poyntertextromanoneregular: [
+      'poyntertextromanoneregular',
       'Helvetica Neue',
       'Helvetica',
       'Arial',
@@ -367,7 +382,7 @@ module.exports = {
   */
 
   textSizes: {
-    'xs': '.75rem',     // 12px
+    'xs': '0.6875rem',  // 11px
     'sm': '.875rem',    // 14px
     'base': '1rem',     // 16px
     'lg': '1.125rem',   // 18px
@@ -562,7 +577,8 @@ module.exports = {
     default: '.25rem',
     'lg': '.5rem',
     'full': '9999px',
-    'button': '2px'
+    'button': '2px',
+    'team-card': '2px'
   },
 
 
@@ -857,6 +873,7 @@ module.exports = {
     '20': '5rem',
     '24': '6rem',
     '32': '8rem',
+    'base': '0.9375rem',
   },
 
 
@@ -1018,7 +1035,7 @@ module.exports = {
     maxWidth: [],
     minHeight: [],
     minWidth: false,
-    negativeMargin: false,
+    negativeMargin: ['responsive'],
     opacity: [],
     outline: [],
     overflow: [],

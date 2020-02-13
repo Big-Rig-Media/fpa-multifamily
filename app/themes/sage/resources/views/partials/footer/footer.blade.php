@@ -1,4 +1,4 @@
-<footer class="brm-footer">
+<footer class="bg-primary-3 brm-footer">
   <div class="brm-container">
     @if( !is_page_template(['views/template-landing.blade.php', 'views/template-splash.blade.php']) )
       @include('partials.footer.footer-global')

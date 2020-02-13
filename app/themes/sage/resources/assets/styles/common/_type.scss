@@ -4,20 +4,18 @@ h3,
 h4,
 h5,
 h6 {
-  @apply mb-5 font-roboto-black font-normal leading-normal;
-}
-
-h2,
-h3,
-h5,
-h6 {
-  @apply font-poyntertextbold;
+  @apply mb-5 font-normal leading-normal;
 }
 
 h2,
 h3,
 h5 {
-  @apply text-primary-1;
+  @apply font-poyntertextromanoneregular text-primary-1;
+}
+
+h5,
+h6 {
+  @apply font-poyntertextbold;
 }
 
 h1 {
@@ -33,7 +31,7 @@ h3 {
 }
 
 h4 {
-  @apply text-2xl;
+  @apply text-2xl font-mulibold;
 }
 
 h5 {
