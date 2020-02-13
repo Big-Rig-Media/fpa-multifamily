@@ -231,6 +231,12 @@ class App extends Controller
                 case 'w596x454':
                     $placeholder = \App\asset_path('images/placeholders/596x454.png');
                 break;
+                case 'w492x544':
+                    $placeholder = \App\asset_path('images/placeholders/492x544.png');
+                break;
+                case 'w246x272':
+                    $placeholder = \App\asset_path('images/placeholders/246x272.png');
+                break;
                 case 'w298x227':
                     $placeholder = \App\asset_path('images/placeholders/298x227.png');
                 break;
@@ -241,6 +247,46 @@ class App extends Controller
             $image = has_post_thumbnail($id) ? $featured : $placeholder;
 
             return $image;
+        }
+
+        return;
+    }
+
+    /**
+     * Get objects's capitalization
+     *
+     * @param   object  $acquisition
+     */
+    public static function capitalization( $object )
+    {
+        if ( $object ) {
+            $capitalization = get_field('capitalization', $object);
+
+            if ( $capitalization ) {
+                return $capitalization;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get object's units
+     *
+     * @param   object  $acquisition
+     */
+    public static function units( $object )
+    {
+        if ( $object ) {
+            $units = get_field('units', $object);
+
+            if ( $units ) {
+                return $units;
+            }
+
+            return;
         }
 
         return;

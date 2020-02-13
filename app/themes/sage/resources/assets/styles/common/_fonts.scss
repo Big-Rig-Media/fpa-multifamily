@@ -243,3 +243,33 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "mulisemibold";
+  src:
+    url("../fonts/muli/muli-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/muli/muli-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "mulibold";
+  src:
+    url("../fonts/muli/muli-bold-webfont.woff2") format("woff2"),
+    url("../fonts/muli/muli-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poyntertextbold";
+  src:
+    url("../fonts/poynter/poyntertext-bold-webfont.woff2") format("woff2"),
+    url("../fonts/poynter/poyntertext-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

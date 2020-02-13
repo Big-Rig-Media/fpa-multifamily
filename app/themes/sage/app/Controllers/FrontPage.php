@@ -11,6 +11,9 @@ use Sober\Controller\Controller;
  */
 class FrontPage extends Controller
 {
+    /**
+     * Get recent acquisitions
+     */
     public function acquisitions()
     {
         $query = new \WP_Query([
@@ -25,6 +28,9 @@ class FrontPage extends Controller
         return;
     }
 
+    /**
+     * Get recent dispositions
+     */
     public function dispositions()
     {
         $query = new \WP_Query([
@@ -39,6 +45,9 @@ class FrontPage extends Controller
         return;
     }
 
+    /**
+     * Get recent posts
+     */
     public function posts()
     {
         $query = new \WP_Query([

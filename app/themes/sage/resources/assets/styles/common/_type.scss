@@ -7,6 +7,19 @@ h6 {
   @apply mb-5 font-roboto-black font-normal leading-normal;
 }
 
+h2,
+h3,
+h5,
+h6 {
+  @apply font-poyntertextbold;
+}
+
+h2,
+h3,
+h5 {
+  @apply text-primary-1;
+}
+
 h1 {
   @apply text-5xl;
 }
@@ -28,7 +41,7 @@ h5 {
 }
 
 h6 {
-  @apply text-lg;
+  @apply text-lg text-primary-2;
 }
 
 p,

@@ -12,9 +12,10 @@
       @endwhile
       @if( $brokers )
         @foreach( $brokers as $broker )
+          <h1>{{ $broker->post_title }}</h1>
           @if( TemplateAcquisitions::dispositions($broker) )
             @foreach( TemplateAcquisitions::dispositions($broker) as $disposition )
-              {{ $disposition->post_title }}
+              <div>{{ $disposition->post_title }}</div>
             @endforeach
           @endif
         @endforeach

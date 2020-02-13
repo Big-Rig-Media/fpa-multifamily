@@ -23,7 +23,7 @@ app/themes/*
 ## Ignore everything in the "mu-plugins" directory, except the plugins you specify
 #################
 app/mu-plugins/*
-!app/mu-plugins/bigrigmedia
+!app/mu-plugins/bigrigmedia.php
 
 #################
 ## Theme files/folders

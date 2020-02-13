@@ -1,0 +1,14 @@
+.state {
+  @apply fill-primary-2 outline-none;
+
+  // Hover
+  @media (hover: hover) {
+    &:hover {
+      @apply text-white fill-primary-1;
+    }
+  }
+
+  &.is-active {
+    @apply text-white fill-primary-1;
+  }
+}

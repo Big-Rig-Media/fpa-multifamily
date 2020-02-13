@@ -82,7 +82,7 @@ class TemplateDispositions extends Controller
 
             if ( $terms ) {
                 $query = new \WP_Query([
-                    'post_type' => 'brokers',
+                    'post_type' => 'employees',
                     's'         =>  $terms[0]->name
                 ]);
 
@@ -104,7 +104,7 @@ class TemplateDispositions extends Controller
      *
      * @param   object  $term
      */
-    public static function dispositions( $term = null )
+    public static function dispositions( $term )
     {
         if ( $term ) {
             $query = new \WP_Query([

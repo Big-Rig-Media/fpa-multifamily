@@ -323,6 +323,27 @@ module.exports = {
       'Arial',
       'serif',
     ],
+    mulisemibold: [
+      'mulisemibold',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
+    mulibold: [
+      'mulibold',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
+    poyntertextbold: [
+      'poyntertextbold',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ]
   },
 
 
@@ -493,6 +514,7 @@ module.exports = {
     default: '1px',
     '0': '0',
     '2': '2px',
+    '3': '3px',
     '4': '4px',
     '8': '8px',
   },
@@ -705,7 +727,8 @@ module.exports = {
     '5xl': '100rem',
     'full': '100%',
     'inner': '640px',
-    'half': '50%'
+    'half': '50%',
+    'custom': '64.125rem'
   },
 
 
@@ -926,6 +949,8 @@ module.exports = {
   svgFill: {
     'current': 'currentColor',
     'white': colors['white'],
+    'primary-1': colors['primary-1'],
+    'primary-2': colors['primary-2']
   },
 
 
@@ -995,9 +1020,9 @@ module.exports = {
     minWidth: false,
     negativeMargin: false,
     opacity: [],
-    outline: false,
+    outline: [],
     overflow: [],
-    padding: [],
+    padding: ['responsive'],
     pointerEvents: false,
     position: [],
     resize: false,

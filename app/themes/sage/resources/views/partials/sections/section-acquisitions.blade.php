@@ -4,11 +4,17 @@
       <h2>Recent Acquisitions</h2>
       <div class="-mx-1 carousel-grid js-carousel-acquisitions">
         @foreach( $acquisitions as $acquisition )
-          <div class="px-1">
+          <div class="mb-5 px-1">
             @if( App::image($acquisition->ID, 'w596x454') )
-              <img src="{{ App::image($acquisition->ID, 'w596x454') }}" alt="{{ $acquisition->post_title }}" />
+              <img loading="lazy" src="{{ App::image($acquisition->ID, 'w596x454') }}" alt="{{ $acquisition->post_title }}" />
             @endif
-            <h6>{{ $acquisition->post_title }}</h6>
+            <h6 class="mt-3 mb-0">{{ $acquisition->post_title }}</h6>
+            @if( App::capitalization($acquisition) )
+              <span class="block"><strong>Capitalization:</strong> {{ App::capitalization($acquisition) }}</span>
+            @endif
+            @if( App::units($acquisition) )
+              <span class="block"><strong>Units:</strong> {{ App::units($acquisition) }}</span>
+            @endif
           </div>
         @endforeach
       </div>

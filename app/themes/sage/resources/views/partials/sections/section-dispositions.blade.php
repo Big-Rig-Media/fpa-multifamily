@@ -4,11 +4,17 @@
       <h2>Recent Dispositions</h2>
       <div class="-mx-1 carousel-grid js-carousel-dispositions">
         @foreach( $dispositions as $disposition )
-          <div class="px-1">
+          <div class="mb-5 px-1">
             @if( App::image($disposition->ID, 'w596x454') )
-              <img src="{{ App::image($disposition->ID, 'w596x454') }}" alt="{{ $disposition->post_title }}" />
+              <img loading="lazy" src="{{ App::image($disposition->ID, 'w596x454') }}" alt="{{ $disposition->post_title }}" />
             @endif
-            <h6>{{ $disposition->post_title }}</h6>
+            <h6 class="mt-3 mb-0">{{ $disposition->post_title }}</h6>
+            @if( App::capitalization($disposition) )
+              <span class="block"><strong>Capitalization:</strong> {{ App::capitalization($disposition) }}</span>
+            @endif
+            @if( App::units($disposition) )
+              <span class="block"><strong>Units:</strong> {{ App::units($disposition) }}</span>
+            @endif
           </div>
         @endforeach
       </div>
