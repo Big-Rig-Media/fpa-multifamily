@@ -10,7 +10,7 @@ h6 {
 h2,
 h3,
 h5 {
-  @apply font-poyntertextromanoneregular text-primary-1;
+  @apply text-primary-1;
 }
 
 h5,
@@ -19,15 +19,27 @@ h6 {
 }
 
 h1 {
-  @apply text-5xl;
+  @apply text-5xl font-muliregular uppercase tracking-wide;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply text-md:5xl;
+  }
 }
 
 h2 {
-  @apply text-4xl;
+  @apply text-4xl font-poyntertextromanoneregular;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply text-md:4xl;
+  }
 }
 
 h3 {
-  @apply text-3xl;
+  @apply text-3xl font-poyntertextitalicfour;
 }
 
 h4 {
@@ -65,7 +77,12 @@ i {
 
 strong,
 b {
-  @apply font-roboto-bold;
+  @apply font-mulibold;
+}
+
+em,
+i {
+  @apply font-muliitalic;
 }
 
 a:not([class]) {

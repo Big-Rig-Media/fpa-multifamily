@@ -13,4 +13,5 @@
     </div>
   </section>
   @include('partials.sections.section-offices')
+  @include('partials.sections.section-employee-spotlight')
 @endsection

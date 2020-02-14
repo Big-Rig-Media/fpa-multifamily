@@ -16,6 +16,10 @@ add_filter('login_headerurl', function() {
     return get_home_url();
 });
 
+apply_filters('excerpt_length', function($length) {
+    return 10;
+}, 999);
+
 /**
  * Row
  *

@@ -55,15 +55,15 @@ let colors = {
 
   'transparent': 'transparent',
 
-  'black': '#22292f',
+  'black': '#262626',
   'grey-darkest': '#3d4852',
-  'grey-darker': '#606f7b',
+  'grey-darker': '#595959',
   'grey-dark': '#76787a',
   'grey': '#b8c2cc',
   'grey-light': '#dfdfdf',
   'grey-lighter': '#f1f5f8',
   'grey-lightest': '#f8fafc',
-  'white': '#ffffff',
+  'white': '#fefefe',
 
   'red-darkest': '#3b0d0c',
   'red-darker': '#621b18',
@@ -177,146 +177,6 @@ module.exports = {
     'fontawesome-solid': [
       'Font Awesome\\ 5 Pro Solid'
     ],
-    'roboto-black': [
-      'roboto-black',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'roboto-bold': [
-      'roboto-bold',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'roboto-italic': [
-      'roboto-italic',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'roboto-light': [
-      'roboto-light',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'roboto-medium': [
-      'roboto-medium',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'roboto-regular': [
-      'roboto-regular',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'roboto-thin': [
-      'roboto-thin',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'lora-bold': [
-      'lora-bold',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'lora-italic': [
-      'lora-italic',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'lora-regular': [
-      'lora-regular',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-black': [
-      'montserrat-black',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-bold': [
-      'montserrat-bold',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-extra-bold': [
-      'montserrat-extra-bold',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-extra-light': [
-      'montserrat-extra-light',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-italic': [
-      'montserrat-italic',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-light': [
-      'montserrat-light',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-medium': [
-      'montserrat-medium',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-regular': [
-      'montserrat-regular',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-semi-bold': [
-      'montserrat-semi-bold',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
-    'montserrat-thin': [
-      'montserrat-thin',
-      'Helvetica Neue',
-      'Helvetica',
-      'Arial',
-      'serif',
-    ],
     muliregular: [
       'muliregular',
       'Helvetica Neue',
@@ -345,6 +205,20 @@ module.exports = {
       'Arial',
       'serif',
     ],
+    muliitalic: [
+      'muliitalic',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
+    mulisemibolditalic: [
+      'mulisemibolditalic',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
     poyntertextbold: [
       'poyntertextbold',
       'Helvetica Neue',
@@ -354,6 +228,20 @@ module.exports = {
     ],
     poyntertextromanoneregular: [
       'poyntertextromanoneregular',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
+    poyntertextregular: [
+      'poyntertextregular',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
+    ],
+    poyntertextitalicfour: [
+      'poyntertextitalicfour',
       'Helvetica Neue',
       'Helvetica',
       'Arial',
@@ -389,8 +277,10 @@ module.exports = {
     'xl': '1.3125rem',  // 21px
     '2xl': '1.3125rem', // 21px
     '3xl': '1.5rem',    // 24px
-    '4xl': '2.25rem',   // 36px
-    '5xl': '3.6875rem', // 59px
+    '4xl': '1.75rem',   // 28px
+    'md:4xl': '2.25rem',   // 36px
+    '5xl': '2rem',      // 32px
+    'md:5xl': '3.6875rem', // 59px
   },
 
 
@@ -744,7 +634,8 @@ module.exports = {
     'full': '100%',
     'inner': '640px',
     'half': '50%',
-    'custom': '64.125rem'
+    'custom': '64.125rem',
+    'small': '64rem',
   },
 
 
@@ -894,7 +785,7 @@ module.exports = {
   */
 
   shadows: {
-    default: '0 2px 4px 0 rgba(0,0,0,0.10)',
+    default: '1px 1px 2px 1px rgba(0,0,0,0.13)',
     'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
@@ -1011,7 +902,7 @@ module.exports = {
 
   modules: {
     appearance: [],
-    backgroundAttachment: false,
+    backgroundAttachment: [],
     backgroundColors: [],
     backgroundPosition: [],
     backgroundRepeat: [],
@@ -1023,7 +914,7 @@ module.exports = {
     borderWidths: [],
     cursor: false,
     display: [],
-    flexbox: [],
+    flexbox: ['responsive'],
     float: [],
     fonts: [],
     fontWeights: [],
@@ -1043,7 +934,7 @@ module.exports = {
     pointerEvents: false,
     position: [],
     resize: false,
-    shadows: false,
+    shadows: [],
     svgFill: [],
     svgStroke: false,
     tableLayout: false,
@@ -1051,12 +942,12 @@ module.exports = {
     textColors: [],
     textSizes: [],
     textStyle: [],
-    tracking: false,
+    tracking: [],
     userSelect: false,
     verticalAlign: false,
     visibility: false,
     whitespace: [],
-    width: [],
+    width: ['responsive'],
     zIndex: [],
   },
 

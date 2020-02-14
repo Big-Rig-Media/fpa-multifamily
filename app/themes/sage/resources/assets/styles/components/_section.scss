@@ -22,6 +22,11 @@
   &.has-loaded {
     @apply text-white bg-center bg-no-repeat bg-cover;
   }
+
+  // Inset Shadow
+  &.has-shadow {
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), inset 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
 }
 
 // Split
@@ -114,4 +119,9 @@
 // Header
 .brm-section__header {
   @apply text-center;
+}
+
+// Spotlight
+.brm-section--spotlight {
+  background-image: linear-gradient(135deg, #a8ceb5 0%, #82a393 100%);
 }

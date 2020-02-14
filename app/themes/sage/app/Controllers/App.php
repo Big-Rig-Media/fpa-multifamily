@@ -235,11 +235,17 @@ class App extends Controller
                 case 'w492x544':
                     $placeholder = \App\asset_path('images/placeholders/492x544.png');
                 break;
+                case 'w324x362':
+                    $placeholder = \App\asset_path('images/placeholders/324x362.png');
+                break;
                 case 'w246x272':
                     $placeholder = \App\asset_path('images/placeholders/246x272.png');
                 break;
                 case 'w298x227':
                     $placeholder = \App\asset_path('images/placeholders/298x227.png');
+                break;
+                case 'w162x181':
+                    $placeholder = \App\asset_path('images/placeholders/162x181.png');
                 break;
                 default:
                 break;
@@ -285,6 +291,21 @@ class App extends Controller
 
             if ( $units ) {
                 return $units;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    public static function url( $object )
+    {
+        if ( $object ) {
+            $url = get_field('blog_external_link', $object);
+
+            if ( $url ) {
+                return $url;
             }
 
             return;

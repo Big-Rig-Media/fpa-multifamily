@@ -29,3 +29,8 @@
 .brm-container--flex-stack {
   @apply flex flex-col flex-wrap relative;
 }
+
+// Small
+.brm-container--small {
+  @apply max-w-small;
+}

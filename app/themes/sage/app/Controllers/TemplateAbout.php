@@ -47,4 +47,27 @@ class TemplateAbout extends Controller
 
         return;
     }
+
+    /**
+     * Get spotlight employees
+     */
+    public function employees()
+    {
+        $employees = get_field('employee_spotlight');
+
+        if ( $employees ) {
+            $query = new \WP_Query([
+                'post_type' => 'employees',
+                'post__in'  => $employees
+            ]);
+
+            if ( $query->have_posts() ) {
+                return $query->posts;
+            }
+
+            return;
+        }
+
+        return;
+    }
 }

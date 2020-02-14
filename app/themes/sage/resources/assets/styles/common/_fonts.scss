@@ -34,6 +34,7 @@
   font-weight: 900;
 }
 
+/*
 @font-face {
   font-family: "roboto-black";
   src:
@@ -233,6 +234,7 @@
   font-style: normal;
   font-display: swap;
 }
+*/
 
 @font-face {
   font-family: "muliregular";
@@ -275,6 +277,26 @@
 }
 
 @font-face {
+  font-family: "muliitalic";
+  src:
+    url("../fonts/muli/muli-italic-webfont.woff2") format("woff2"),
+    url("../fonts/muli/muli-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "mulisemibolditalic";
+  src:
+    url("../fonts/muli/muli-semi-bolditalic-webfont.woff2") format("woff2"),
+    url("../fonts/muli/muli-semi-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "poyntertextbold";
   src:
     url("../fonts/poynter/poyntertext-bold-webfont.woff2") format("woff2"),
@@ -289,6 +311,26 @@
   src:
     url("../fonts/poynter/poyntertextromanone_regular-webfont.woff2") format("woff2"),
     url("../fonts/poynter/poyntertextromanone_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poyntertextregular";
+  src:
+    url("../fonts/poynter/poyntertext_regular-webfont.woff2") format("woff2"),
+    url("../fonts/poynter/poyntertext_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poyntertextitalicfour";
+  src:
+    url("../fonts/poynter/poyntertext-italicfour-webfont.woff2") format("woff2"),
+    url("../fonts/poynter/poyntertext-italicfour-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

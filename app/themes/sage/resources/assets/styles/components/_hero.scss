@@ -1,19 +1,8 @@
 // Hero
 .brm-hero {
-  @apply relative overflow-hidden;
+  @apply relative py-16 overflow-hidden;
 
-  // 1024
-  @media (min-width: 1024px) {
-    @apply h-screen max-h-hero;
-  }
-
-  // Home Specific
-  .page-template-template-home & {
-    // 1024
-    @media (min-width: 1024px) {
-      @apply max-h-hero-home;
-    }
-  }
+  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), inset 0 5px 10px rgba(0, 0, 0, 0.2);
 
   // Splash Specific
   .page-template-template-splash & {
@@ -46,6 +35,31 @@
     @media (max-width: 1023px) {
       @apply py-16;
     }
+  }
+
+  &.blue-gradient {
+    background-image: radial-gradient(50% 50%, #1c3d68 50%, #0f1e33 100%);
+  }
+
+  &.gold-gradient {
+    background-image: radial-gradient(50% 50%, #ceb58c 50%, #a38242 100%);
+  }
+
+  &.green-gradient {
+    background-image: radial-gradient(50% 50%, #a2cab0 50%, #82a293 100%);
+  }
+
+  &.grey-gradient {
+    background-image: radial-gradient(50% 50%, #595959 50%, #2e2e2e 100%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-current;
   }
 }
 

@@ -85,8 +85,6 @@ export default {
 
         galleryAnchor.setAttribute('data-fancybox', 'gallery');
       });
-
-      $('[data-fancybox]').fancybox();
     }
 
     // Handle js popup
@@ -125,6 +123,10 @@ export default {
         $(this).attr('autocomplete', 'off');
       });
     }
+
+    $('[data-fancybox]').fancybox({
+      autoFocus: false,
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

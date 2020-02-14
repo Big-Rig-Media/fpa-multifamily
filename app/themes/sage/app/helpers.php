@@ -136,7 +136,8 @@ function display_layout()
 
     isset($display) || $display = !in_array(true, [
         is_front_page(),
-        is_page()
+        is_page(),
+        is_home()
     ]);
 
     return apply_filters('sage/display_layout', $display);

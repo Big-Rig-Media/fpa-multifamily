@@ -7,6 +7,7 @@ namespace App;
  */
 add_filter('upload_mimes', function($mimes) {
     $mimes['svg'] = 'image/svg+xml';
+    $mimes['vcf'] = 'text/x-vcard';
 
     return $mimes;
 });
@@ -21,14 +22,18 @@ add_filter('upload_mimes', function($mimes) {
  */
 
 $custom_sizes = [
-    'w1920x800' => [1920, 800, true],
-    'w960x800'  => [960, 800, true],
-    'w960x600'  => [960, 600, true],
-    'w596x454'  => [595, 454, true],
-    'w492x544'  => [492, 544, true],
-    'w480x300'  => [480, 300, true],
-    'w298x227'  => [298, 227, true],
-    'w246x272'  => [246, 272, true]
+    'w1920x1920'    => [1920, 1920, true],
+    'w1920x579'     => [1920, 579, true],
+    'w960x1920'     => [960, 1920, true],
+    'w960x579'      => [960, 579, true],
+    'w960x600'      => [960, 600, true],
+    'w596x454'      => [595, 454, true],
+    'w492x544'      => [492, 544, true],
+    'w480x300'      => [480, 300, true],
+    'w324x362'      => [324, 362, true],
+    'w298x227'      => [298, 227, true],
+    'w246x272'      => [246, 272, true],
+    'w162x181'      => [162, 181, true]
 ];
 
 if (!empty($custom_sizes)) {

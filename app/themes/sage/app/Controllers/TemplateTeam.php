@@ -53,4 +53,24 @@ class TemplateTeam extends Controller
 
         return;
     }
+
+    /**
+     * Get vcard of employee
+     *
+     * @param   object  $employee
+     */
+    public static function vcard( $employee )
+    {
+        if ( $employee ) {
+            $vcard = get_field('employee_vcard', $employee);
+
+            if ( $vcard ) {
+                return $vcard;
+            }
+
+            return;
+        }
+
+        return;
+    }
 }

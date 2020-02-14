@@ -5,5 +5,7 @@
     @include('partials.hero.hero-carousel')
   @elseif( get_field('hero_type') === 'video' )
     @include('partials.hero.hero-video')
+  @elseif( get_field('hero_type') === 'color' )
+    @include('partials.hero.hero-color')
   @endif
 @endif
