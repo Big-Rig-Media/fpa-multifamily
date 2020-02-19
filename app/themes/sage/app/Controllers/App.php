@@ -262,7 +262,7 @@ class App extends Controller
     /**
      * Get objects's capitalization
      *
-     * @param   object  $acquisition
+     * @param   object  $object
      */
     public static function capitalization( $object )
     {
@@ -282,7 +282,7 @@ class App extends Controller
     /**
      * Get object's units
      *
-     * @param   object  $acquisition
+     * @param   object  $object
      */
     public static function units( $object )
     {
@@ -299,6 +299,11 @@ class App extends Controller
         return;
     }
 
+    /**
+     * Get object's url
+     *
+     * @param   object  $object
+     */
     public static function url( $object )
     {
         if ( $object ) {
@@ -306,6 +311,24 @@ class App extends Controller
 
             if ( $url ) {
                 return $url;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    public static function employee( $id )
+    {
+        if ( $id ) {
+            $query = new \WP_Query([
+                'post_type' => 'employees',
+                'post__in'  => [$id]
+            ]);
+
+            if ( $query->have_posts() ) {
+                return $query->post;
             }
 
             return;

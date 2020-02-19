@@ -52,6 +52,7 @@ let colors = {
   'accent-2': '#d6c3a5',
   'accent-3': '#f6d6ca',
   'accent-4': '#345c97',
+  'accent-5': '#d6c099',
 
   'transparent': 'transparent',
 
@@ -270,17 +271,17 @@ module.exports = {
   */
 
   textSizes: {
-    'xs': '0.6875rem',  // 11px
-    'sm': '.875rem',    // 14px
-    'base': '1rem',     // 16px
-    'lg': '1.125rem',   // 18px
-    'xl': '1.3125rem',  // 21px
-    '2xl': '1.3125rem', // 21px
-    '3xl': '1.5rem',    // 24px
-    '4xl': '1.75rem',   // 28px
-    'md:4xl': '2.25rem',   // 36px
-    '5xl': '2rem',      // 32px
-    'md:5xl': '3.6875rem', // 59px
+    'xs': '0.6875rem',      // 11px
+    'sm': '.875rem',        // 14px
+    'base': '1rem',         // 16px
+    'lg': '1.125rem',       // 18px
+    'xl': '1.3125rem',      // 21px
+    '2xl': '1.3125rem',     // 21px
+    '3xl': '1.5rem',        // 24px
+    '4xl': '1.75rem',       // 28px
+    'md:4xl': '2.25rem',    // 36px
+    '5xl': '2rem',          // 32px
+    'md:5xl': '3.6875rem',  // 59px
   },
 
 
@@ -521,7 +522,8 @@ module.exports = {
     '1/6': '16.66667%',
     '5/6': '83.33333%',
     'full': '100%',
-    'screen': '100vw'
+    'screen': '100vw',
+    'icon': '17px',
   },
 
 
@@ -559,7 +561,8 @@ module.exports = {
     '64': '16rem',
     'full': '100%',
     'screen': '100vh',
-    'slick-dots': '6px'
+    'slick-dots': '6px',
+    'icon': '17px',
   },
 
 
@@ -636,6 +639,7 @@ module.exports = {
     'half': '50%',
     'custom': '64.125rem',
     'small': '64rem',
+    'hr': '714px',
   },
 
 
@@ -730,6 +734,7 @@ module.exports = {
     '20': '5rem',
     '24': '6rem',
     '32': '8rem',
+    'base': '0.9375rem',
   },
 
 
@@ -923,7 +928,7 @@ module.exports = {
     lists: [],
     margin: [],
     maxHeight: [],
-    maxWidth: [],
+    maxWidth: ['responsive'],
     minHeight: [],
     minWidth: false,
     negativeMargin: ['responsive'],
@@ -944,7 +949,7 @@ module.exports = {
     textStyle: [],
     tracking: [],
     userSelect: false,
-    verticalAlign: false,
+    verticalAlign: [],
     visibility: false,
     whitespace: [],
     width: ['responsive'],

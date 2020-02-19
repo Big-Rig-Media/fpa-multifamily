@@ -1,0 +1,29 @@
+.dispositions {
+  thead {
+    // 1023 <=
+    @media (max-width: 1023px) {
+      @apply hidden;
+    }
+  }
+
+  tbody tr {
+    td {
+      // 1023 <=
+      @media (max-width: 1023px) {
+        @apply block w-full;
+
+        &:nth-child(1)::before {
+          content: "Property";
+        }
+
+        &:nth-child(2)::before {
+          content: "Units";
+        }
+
+        &:nth-child(3)::before {
+          content: "Broker";
+        }
+      }
+    }
+  }
+}

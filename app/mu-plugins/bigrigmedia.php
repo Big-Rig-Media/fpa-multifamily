@@ -63,6 +63,22 @@ class BigRigMedia
       'supports'              => ['editor','excerpt','thumbnail','title']
     ]);
 
+    register_post_type('brokers', [
+      'label'                 => 'Brokers',
+      'public'                => false,
+      'publicly_queryable'    => false,
+      'show_ui'               => true,
+      'show_in_menu'          => true,
+      'query_var'             => true,
+      'rewrite'               => ['slug' => 'brokers', 'with_front' => false],
+      'capability_type'       => 'post',
+      'has_archive'           => false,
+      'hierarchical'          => false,
+      'menu_position'         => null,
+      'menu_icon'             => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#a0a5aa" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg>'),
+      'supports'              => ['editor','title']
+    ]);
+
     register_post_type('dispositions', [
       'label'                 => 'Dispositions',
       'public'                => false,
@@ -184,7 +200,7 @@ class BigRigMedia
   public function update_broker_terms( $post_id )
   {
     // Check if we're on the right post type
-    if ( get_post_type($post_id) !== 'employees' ) {
+    if ( get_post_type($post_id) !== 'brokers' ) {
       return;
     }
 
@@ -193,28 +209,25 @@ class BigRigMedia
       return;
     }
 
-    // Check if employee is a broker
-    if ( get_field('employee_broker', $post_id) && get_field('employee_broker', $post_id) === 'yes' ) {
-      // Define data to insert
-      $broker_title = get_the_title($post_id);
-      $broker_slug  = get_post($post_id)->post_name;
+    // Define data to insert
+    $broker_title = get_the_title($post_id);
+    $broker_slug  = get_post($post_id)->post_name;
 
-      // Grab all disposition brokers
-      $broker_terms = get_terms([
-        'taxonomy'      => 'dispositions_broker',
-        'hide_empty'    => false
-      ]);
+    // Grab all disposition brokers
+    $broker_terms = get_terms([
+      'taxonomy'      => 'dispositions_broker',
+      'hide_empty'    => false
+    ]);
 
-      // Loop through all disposition brokers and update if necessary
-      foreach ( $broker_terms as $broker_term ) {
-        if ( $broker_term->name === $broker_title ) {
-          wp_update_term( $broker_term->term_id, $broker_term->taxonomy, ['name' => $broker_title, 'slug' => $broker_slug] );
-        }
+    // Loop through all disposition brokers and update if necessary
+    foreach ( $broker_terms as $broker_term ) {
+      if ( $broker_term->name === $broker_title ) {
+        wp_update_term( $broker_term->term_id, $broker_term->taxonomy, ['name' => $broker_title, 'slug' => $broker_slug] );
       }
-
-      // Insert new disposition broker
-      wp_insert_term( $broker_title, 'dispositions_broker', ['slug' => $broker_slug] );
     }
+
+    // Insert new disposition broker
+    wp_insert_term( $broker_title, 'dispositions_broker', ['slug' => $broker_slug] );
 
     return;
   }

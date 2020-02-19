@@ -13,6 +13,8 @@ export default {
     const jsBackgrounds = document.querySelectorAll('.js-background');
     const jsPopup = document.querySelector('.js-popup');
     const galleryThumbs = document.querySelectorAll('.gallery-icon');
+    const dataTabs = document.querySelectorAll('.tab')
+    const activateTabs = document.querySelectorAll('.js-tab-activate');
 
     // Handle external urls
     anchors.forEach(anchor => {
@@ -124,9 +126,53 @@ export default {
       });
     }
 
+    // Enable fancybox
     $('[data-fancybox]').fancybox({
       autoFocus: false,
     });
+
+    // Handle data tabs
+    if (activateTabs.length) {
+      let activeCaption = document.querySelectorAll('.active-tab-caption')
+      let currentTab = document.querySelector('.is-active.js-tab-activate')
+
+      if (activeCaption) {
+        activeCaption.innerHTML = currentTab.innerHTML
+      }
+
+      activateTabs.forEach(activateTab => {
+        activateTab.addEventListener('click', (e) => {
+          e.preventDefault()
+
+          currentTab.classList.remove('is-active')
+
+          if (currentTab !== activateTab.classList.contains('is-active')) {
+            currentTab = activateTab
+            currentTab.classList.add('is-active')
+          }
+
+          let activeTab = currentTab.dataset.tab
+
+          if (activeCaption) {
+            activeCaption.innerHTML = currentTab.innerHTML
+          }
+
+          dataTabs.forEach(dataTab => {
+            const tabID = dataTab.getAttribute('id')
+
+            if (tabID === activeTab) {
+              dataTab.classList.remove('hidden')
+              dataTab.classList.add('flex', 'is-active')
+
+              return
+            }
+
+            dataTab.classList.add('hidden')
+            dataTab.classList.remove('flex', 'is-active')
+          })
+        })
+      })
+    }
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

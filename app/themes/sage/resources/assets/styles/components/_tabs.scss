@@ -1,0 +1,29 @@
+.tabs {
+  button {
+    @apply relative;
+
+    &::before {
+      @apply block w-full h-slick-dots mb-2 border-t border-b border-solid border-grey-light;
+
+      content: "";
+    }
+
+    &:first-child {
+      &::before {
+        @apply border-l rounded-l-lg;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        @apply border-r rounded-r-lg;
+      }
+    }
+
+    &.is-active {
+      &::before {
+        @apply bg-primary-1;
+      }
+    }
+  }
+}

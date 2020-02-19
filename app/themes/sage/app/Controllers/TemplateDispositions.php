@@ -82,7 +82,7 @@ class TemplateDispositions extends Controller
 
             if ( $terms ) {
                 $query = new \WP_Query([
-                    'post_type' => 'employees',
+                    'post_type' => 'brokers',
                     's'         =>  $terms[0]->name
                 ]);
 
@@ -91,6 +91,86 @@ class TemplateDispositions extends Controller
                 }
 
                 return;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get broker's company
+     *
+     * @param   object  $broker
+     */
+    public static function company( $broker )
+    {
+        if ( $broker ) {
+            $company = get_field('company', $broker);
+
+            if ( $company ) {
+                return $company;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get broker's phone
+     *
+     * @param   object  $broker
+     */
+    public static function phone( $broker )
+    {
+        if ( $broker ) {
+            $phone = get_field('phone', $broker);
+
+            if ( $phone ) {
+                return $phone;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get broker's email
+     *
+     * @param   object  $broker
+     */
+    public static function email( $broker )
+    {
+        if ( $broker ) {
+            $email = get_field('email', $broker);
+
+            if ( $email ) {
+                return $email;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get disposition's website
+     *
+     * @param   object  $disposition
+     */
+    public static function website( $disposition )
+    {
+        if ( $disposition ) {
+            $website = get_field('website', $disposition);
+
+            if ( $website ) {
+                return $website;
             }
 
             return;

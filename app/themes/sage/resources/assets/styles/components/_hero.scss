@@ -1,8 +1,13 @@
 // Hero
 .brm-hero {
-  @apply relative py-16 overflow-hidden;
+  @apply relative py-8 overflow-hidden;
 
   box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), inset 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply py-16;
+  }
 
   // Splash Specific
   .page-template-template-splash & {
@@ -59,7 +64,16 @@
   h4,
   h5,
   h6 {
-    @apply text-current;
+    @apply mb-0 text-current;
+  }
+
+  h3,
+  hr {
+    @apply max-w-hr mx-auto;
+  }
+
+  hr {
+    @apply my-5 bg-white;
   }
 }
 
