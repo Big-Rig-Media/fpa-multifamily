@@ -1,4 +1,17 @@
 .tabs {
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply flex flex-col;
+
+    .tab {
+      order: 2;
+    }
+
+    .tab-buttons {
+      order: 1;
+    }
+  }
+
   button {
     @apply relative;
 

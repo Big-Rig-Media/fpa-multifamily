@@ -14,6 +14,25 @@
     @apply py-0;
   }
 
+  // Investment Strategies Page
+  .page-template-template-investment-strategies & {
+    @apply text-center;
+
+    // 1024
+    @media (min-width: 1024px) {
+      @apply pt-8 pb-investment-hero;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply text-white;
+    }
+  }
+
   // Splash Specific
   .page-template-template-splash & {
     @apply flex flex-col flex-wrap items-center justify-center;
@@ -48,6 +67,11 @@
       // Portfolio Page
       .page-id-16 & {
         @apply py-0;
+      }
+
+      // Investment Strategies Page
+      .page-template-template-investment-strategies & {
+        @apply pt-3 pb-32;
       }
     }
   }

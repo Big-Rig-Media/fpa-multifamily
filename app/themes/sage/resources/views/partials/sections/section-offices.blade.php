@@ -4,13 +4,18 @@
       <h2>FPA Offices</h2>
       {!! get_field('fpa_offices_content') !!}
       @if( $offices )
-        <ul class="md:hidden flex flex-row flex-wrap justify-between -mx-base list-reset">
+        <ul class="md:hidden list-reset">
           @foreach( $offices as $office )
-            <li class="w-1/2 mb-5 px-base text-left">
+            <li class="w-full mb-5 text-left">
               <h6 class="mb-0">{{ $office->post_title }}</h6>
               @if( get_field('office_address', $office) )
                 <span class="block">
                   <a class="text-primary-1 no-underline" href="{{ TemplateAbout::address($office) }}">{{ get_field('office_address', $office) }}</a>
+                </span>
+              @endif
+              @if( TemplateAbout::phone($office) )
+                <span class="block mt-3">
+                  <a class="text-primary-1 no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', TemplateAbout::phone($office)) }}">T: {{ TemplateAbout::phone($office) }}</a>
                 </span>
               @endif
             </li>

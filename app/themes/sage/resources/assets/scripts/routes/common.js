@@ -13,8 +13,7 @@ export default {
     const jsBackgrounds = document.querySelectorAll('.js-background');
     const jsPopup = document.querySelector('.js-popup');
     const galleryThumbs = document.querySelectorAll('.gallery-icon');
-    const dataTabs = document.querySelectorAll('.tab')
-    const activateTabs = document.querySelectorAll('.js-tab-activate');
+    const tabs = document.querySelectorAll('.tabs');
 
     // Handle external urls
     anchors.forEach(anchor => {
@@ -132,43 +131,61 @@ export default {
     });
 
     // Handle data tabs
-    if (activateTabs.length) {
-      let activeCaption = document.querySelectorAll('.active-tab-caption')
-      let currentTab = document.querySelector('.is-active.js-tab-activate')
+    if (tabs) {
+      const activeCaptions = document.querySelectorAll('.active-tab-caption')
 
-      if (activeCaption) {
-        activeCaption.innerHTML = currentTab.innerHTML
+      // Set the active caption for each tab caption on page
+      if (activeCaptions) {
+        activeCaptions.forEach(activeCaption => {
+          const activeTabs = activeCaption.parentNode.parentNode.querySelector('.is-active.js-tab-activate')
+
+          activeCaption.innerHTML = activeTabs.innerHTML
+        })
       }
 
-      activateTabs.forEach(activateTab => {
-        activateTab.addEventListener('click', (e) => {
-          e.preventDefault()
+      // Loop through each tab component and do some shit
+      tabs.forEach(tab => {
+        let activeCaption = tab.parentNode.querySelector('.active-tab-caption')
+        let activeTabButton = tab.querySelector('.is-active.js-tab-activate')
+        const tabButtons = tab.querySelectorAll('.js-tab-activate')
+        const tabStats = tab.querySelectorAll('.tab')
 
-          currentTab.classList.remove('is-active')
+        // Loop through all tab buttons and listen for a click event
+        tabButtons.forEach(tabButton => {
+          tabButton.addEventListener('click', (e) => {
+            e.preventDefault()
 
-          if (currentTab !== activateTab.classList.contains('is-active')) {
-            currentTab = activateTab
-            currentTab.classList.add('is-active')
-          }
+            activeTabButton.classList.remove('is-active')
 
-          let activeTab = currentTab.dataset.tab
+            // Set the new active button
+            if (activeTabButton !== tabButton.classList.contains('is-active')) {
+              activeTabButton = tabButton
 
-          if (activeCaption) {
-            activeCaption.innerHTML = currentTab.innerHTML
-          }
-
-          dataTabs.forEach(dataTab => {
-            const tabID = dataTab.getAttribute('id')
-
-            if (tabID === activeTab) {
-              dataTab.classList.remove('hidden')
-              dataTab.classList.add('flex', 'is-active')
-
-              return
+              activeTabButton.classList.add('is-active')
             }
 
-            dataTab.classList.add('hidden')
-            dataTab.classList.remove('flex', 'is-active')
+            // Set the active caption text based on the current clicked tab button
+            if (activeCaption) {
+              activeCaption.innerHTML = tabButton.innerHTML
+            }
+
+            // Set the active tab button id
+            let activeTabButtonId = activeTabButton.dataset.tab
+
+            // Determine what set of tab stats to display
+            tabStats.forEach(tabStat => {
+              const tabId = tabStat.getAttribute('id')
+
+              if (tabId === activeTabButtonId) {
+                tabStat.classList.remove('hidden')
+                tabStat.classList.add('flex', 'is-active')
+
+                return
+              }
+
+              tabStat.classList.add('hidden')
+              tabStat.classList.remove('flex', 'is-active')
+            })
           })
         })
       })

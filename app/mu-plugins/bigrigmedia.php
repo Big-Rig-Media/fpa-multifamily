@@ -37,9 +37,13 @@ class BigRigMedia
     add_action('save_post', [$this, 'update_broker_terms']);
     add_action('save_post', [$this, 'update_office_terms']);
 
-    // Admin: Add columns to faqs custom post type
+    // Admin: Add columns to employees custom post type
     add_filter( 'manage_edit-employees_columns', [$this, 'employees_admin_columns'] );
     add_action( 'manage_employees_posts_custom_column', [$this, 'employees_admin_columns_content'], 10, 2 );
+
+    // Admin: Add columns to dispositions custom post type
+    add_filter( 'manage_edit-dispositions_columns', [$this, 'dispositions_admin_columns'] );
+    add_action( 'manage_dispositions_posts_custom_column', [$this, 'dispositions_admin_columns_content'], 10, 2 );
   }
 
   /**
@@ -280,6 +284,28 @@ class BigRigMedia
   }
 
   /**
+   * Modify dispositions admin columns
+   *
+   * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_$post_type_posts_columns
+   * @param array $columns
+   * @since 1.0.0
+   */
+  public function dispositions_admin_columns( $columns )
+  {
+    $columns = [
+      'cb'            => '<input type="checkbox" />',
+      'title'         => __('Title'),
+      'broker'        => __('Broker'),
+      'city'          => __('City'),
+      'state'         => __('State'),
+      'status'        => __('Status'),
+      'date'          => __('Date')
+    ];
+
+    return $columns;
+  }
+
+  /**
    * Modify employees admin columns
    *
    * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_$post_type_posts_columns
@@ -316,6 +342,65 @@ class BigRigMedia
         }
       break;
     }
+  }
+
+  /**
+   * Populate dispositions admin columns
+   *
+   * @link https://codex.wordpress.org/Plugin_API/Action_Reference/manage_$post_type_posts_custom_column
+   * @param string $column_name
+   * @param int    $post_id
+   * @since 1.0.0
+   */
+  public function dispositions_admin_columns_content( $column_name, $post_id )
+  {
+    $output = [];
+
+    switch( $column_name ) {
+      // Broker
+      case 'broker':
+        $terms = get_the_terms( $post_id, 'dispositions_broker' );
+
+        if ( !empty( $terms ))  {
+          foreach ( $terms as $term ) {
+            $output[] = $term->name;
+          }
+        }
+      break;
+      // City
+      case 'city':
+        $terms = get_the_terms( $post_id, 'dispositions_city' );
+
+        if ( !empty( $terms ))  {
+          foreach ( $terms as $term ) {
+            $output[] = $term->name;
+          }
+        }
+      break;
+      // State
+      case 'state':
+        $terms = get_the_terms( $post_id, 'dispositions_state' );
+
+        if ( !empty( $terms ))  {
+          foreach ( $terms as $term ) {
+            $output[] = $term->name;
+          }
+        }
+      break;
+      // Status
+      case 'status':
+        $terms = get_the_terms( $post_id, 'dispositions_status' );
+
+        if ( !empty( $terms ))  {
+          foreach ( $terms as $term ) {
+            $output[] = $term->name;
+          }
+        }
+      break;
+    }
+
+    // Return output
+    echo join(', ', $output);
   }
 }
 

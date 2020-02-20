@@ -90,7 +90,7 @@
                               <a href="tel:{{ preg_replace('/[^0-9]/', '', TemplateDispositions::phone(TemplateDispositions::broker($disposition))) }}">{{ TemplateDispositions::phone(TemplateDispositions::broker($disposition)) }}</a>
                             </span>
                             <span class="block mt-5">
-                              <a class="brm-btn brm-btn--primary" href="mailto:{{ TemplateDispositions::email(TemplateDispositions::broker($disposition)) }}">Email</a>
+                              <a class="brm-btn brm-btn--primary" href="mailto:{{ TemplateDispositions::email(TemplateDispositions::broker($disposition)) }}?subject=Disposition Inquiry {{ $disposition->post_title }}&body=Please send me more information regarding the disposition offering for {{ $disposition->post_title }} in {{ TemplateDispositions::city($disposition) }}, {{ TemplateDispositions::state($disposition) }} - {{ TemplateDispositions::units($disposition) }} units">Email</a>
                             </span>
                           @endif
                         </td>

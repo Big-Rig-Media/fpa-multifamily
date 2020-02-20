@@ -49,6 +49,26 @@ class TemplateAbout extends Controller
     }
 
     /**
+     * Get phone of office
+     *
+     * @param   object  $office
+     */
+    public static function phone( $office )
+    {
+        if ( $office ) {
+            $phone = get_field('office_phone', $office);
+
+            if ( $phone ) {
+                return $phone;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
      * Get spotlight employees
      */
     public function employees()

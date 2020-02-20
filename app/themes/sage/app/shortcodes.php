@@ -2,9 +2,15 @@
 
 namespace App;
 
+/**
+ * employee
+ *
+ * @param   array   $atts
+ */
 add_shortcode('employee', function( $atts, $content = null ) {
     extract(shortcode_atts([
-        'id' => 157,
+        'id'            => 157,
+        'background'    => 'white'
     ], $atts));
 
     $query = new \WP_Query([
@@ -13,7 +19,7 @@ add_shortcode('employee', function( $atts, $content = null ) {
     ]);
 
     if ( $query->have_posts() ) {
-        return \App\template('partials.shortcodes.shortcode-employee', ['employee' => $query->post]);
+        return \App\template('partials.shortcodes.shortcode-employee', ['employee' => $query->post, 'background' => $background]);
     }
 
     return;

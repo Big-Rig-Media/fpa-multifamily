@@ -55,6 +55,12 @@ let colors = {
   'accent-5': '#d6c099',
   'accent-6': '#892406',
 
+  'dana': '#fcd4c7',
+  'parker': '#cfb58c',
+  'dan': '#a8cfb5',
+  'ford': '#8c2105',
+  'ronak': '#1c3d69',
+
   'transparent': 'transparent',
 
   'black': '#262626',
@@ -702,6 +708,7 @@ module.exports = {
     '24': '6rem',
     '32': '8rem',
     'base': '0.9375rem',
+    'investment-hero': '28.75rem',
   },
 
 
