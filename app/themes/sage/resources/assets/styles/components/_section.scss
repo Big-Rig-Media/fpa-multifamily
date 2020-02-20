@@ -130,3 +130,8 @@
 .brm-section--employee {
   background-image: radial-gradient(50% 50%, #fbeedd 50%, #ceb58c 100%);
 }
+
+// Pagiation
+.brm-section--pagination {
+  @apply py-8;
+}

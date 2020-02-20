@@ -1,6 +1,7 @@
 @if( $employees )
   <section class="brm-section brm-section--spotlight has-shadow">
     <div class="brm-container brm-container--small">
+      <h2 class="text-center text-white">Team Member Spotlight</h2>
       <div class="mb-10 shadow js-carousel-employees">
         @foreach( $employees as $employee )
           <div class="w-full">

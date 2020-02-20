@@ -35,6 +35,11 @@ class BigRigMedia
     // Actions
     add_action('init', [$this, 'init']);
     add_action('save_post', [$this, 'update_broker_terms']);
+    add_action('save_post', [$this, 'update_office_terms']);
+
+    // Admin: Add columns to faqs custom post type
+    add_filter( 'manage_edit-employees_columns', [$this, 'employees_admin_columns'] );
+    add_action( 'manage_employees_posts_custom_column', [$this, 'employees_admin_columns_content'], 10, 2 );
   }
 
   /**
@@ -60,7 +65,7 @@ class BigRigMedia
       'hierarchical'          => false,
       'menu_position'         => null,
       'menu_icon'             => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#a0a5aa" d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z"/></svg>'),
-      'supports'              => ['editor','excerpt','thumbnail','title']
+      'supports'              => ['thumbnail','title']
     ]);
 
     register_post_type('brokers', [
@@ -76,7 +81,7 @@ class BigRigMedia
       'hierarchical'          => false,
       'menu_position'         => null,
       'menu_icon'             => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#a0a5aa" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg>'),
-      'supports'              => ['editor','title']
+      'supports'              => ['title']
     ]);
 
     register_post_type('dispositions', [
@@ -92,7 +97,7 @@ class BigRigMedia
       'hierarchical'          => false,
       'menu_position'         => null,
       'menu_icon'             => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#a0a5aa" d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z"/></svg>'),
-      'supports'              => ['editor','excerpt','thumbnail','title']
+      'supports'              => ['thumbnail','title']
     ]);
 
     register_post_type('employees', [
@@ -113,8 +118,8 @@ class BigRigMedia
 
     register_post_type('offices', [
       'label'                 => 'Offices',
-      'public'                => false,
-      'publicly_queryable'    => false,
+      'public'                => true,
+      'publicly_queryable'    => true,
       'show_ui'               => true,
       'show_in_menu'          => true,
       'query_var'             => true,
@@ -124,7 +129,7 @@ class BigRigMedia
       'hierarchical'          => false,
       'menu_position'         => null,
       'menu_icon'             => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#a0a5aa" d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>'),
-      'supports'              => ['editor','excerpt','thumbnail','title']
+      'supports'              => ['thumbnail','title']
     ]);
 
     // Set taxonomies
@@ -157,9 +162,16 @@ class BigRigMedia
         'hierarchical'  => true,
         'parent'        => 'dispositions'
       ],
+      'Employees Office' => [
+        'public'        => false,
+        'label'         => 'Office',
+        'url'           => 'office',
+        'hierarchical'  => true,
+        'parent'        => 'employees'
+      ],
       'Employees Job Title' => [
         'public'        => false,
-        'label'         => 'Title',
+        'label'         => 'Job Title',
         'url'           => 'title',
         'hierarchical'  => true,
         'parent'        => 'employees'
@@ -189,6 +201,41 @@ class BigRigMedia
         );
       }
     }
+  }
+
+  public function update_office_terms( $post_id )
+  {
+    // Check if we're on the right post type
+    if ( get_post_type($post_id) !== 'offices' ) {
+      return;
+    }
+
+    // Check that we're not on an auto draft
+    if ( get_post_status($post_id) === 'auto-draft' ) {
+      return;
+    }
+
+    // Define data to insert
+    $office_title = get_the_title($post_id);
+    $office_slug  = get_post($post_id)->post_name;
+
+    // Grab all disposition brokers
+    $office_terms = get_terms([
+      'taxonomy'      => 'employees_office',
+      'hide_empty'    => false
+    ]);
+
+    // Loop through all employee offices and update if necessary
+    foreach ( $office_terms as $office_term ) {
+      if ( $office_term->name === $office_title ) {
+        wp_update_term( $office_term->term_id, $office_term->taxonomy, ['name' => $office_title, 'slug' => $office_slug] );
+      }
+    }
+
+    // Insert new employee office
+    wp_insert_term( $office_title, 'employees_office', ['slug' => $office_slug] );
+
+    return;
   }
 
   /**
@@ -230,6 +277,45 @@ class BigRigMedia
     wp_insert_term( $broker_title, 'dispositions_broker', ['slug' => $broker_slug] );
 
     return;
+  }
+
+  /**
+   * Modify employees admin columns
+   *
+   * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_$post_type_posts_columns
+   * @param array $columns
+   * @since 1.0.0
+   */
+  public function employees_admin_columns( $columns )
+  {
+    $columns = [
+      'cb'            => '<input type="checkbox" />',
+      'title'         => __('Title'),
+      'shortcode'     => __('Shortcode'),
+      'date'          => __('Date')
+    ];
+
+    return $columns;
+  }
+
+  /**
+   * Populate employees admin columns
+   *
+   * @link https://codex.wordpress.org/Plugin_API/Action_Reference/manage_$post_type_posts_custom_column
+   * @param string $column_name
+   * @param int    $post_id
+   * @since 1.0.0
+   */
+  public function employees_admin_columns_content( $column_name, $post_id )
+  {
+    switch( $column_name ) {
+      // Shortcode
+      case 'shortcode':
+        if ( $post_id ) {
+          echo '[employee id='.$post_id.']';
+        }
+      break;
+    }
   }
 }
 

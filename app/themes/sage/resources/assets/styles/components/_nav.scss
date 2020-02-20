@@ -2,11 +2,11 @@
 .brm-nav--basic {
   // 1023 <=
   @media (max-width: 1023px) {
-    @apply hidden fixed z-40 pin px-8 py-32 bg-primary-2 overflow-y-scroll;
+    @apply fixed z-40 pin-t pin-r p-8 bg-white overflow-y-scroll pull-right pull-transition;
 
     // Open State
     .nav-is-open & {
-      @apply block;
+      @apply block pull-right-normal;
     }
   }
 }
@@ -35,8 +35,12 @@
 }
 
 // Pagination Specific
-.nav--pagination {
-  @apply mt-10;
+.brm-nav--pagination {
+  span {
+    @apply inline-block py-2 px-5 text-sm font-mulisemibold text-primary-2 no-underline uppercase border-0 rounded-button shadow;
+
+    background-image: radial-gradient(50% 100%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%, #f8f8f8 100%);
+  }
 }
 
 // Navigation List
@@ -45,6 +49,23 @@
 
   // Global
   .brm-nav & {
+    // 1023 <=
+    @media (max-width: 1023px) {
+      .menu-item {
+        a {
+          @apply no-underline uppercase;
+        }
+      }
+
+      .menu-investor-login {
+        a {
+          @apply inline-block py-2 px-5 text-sm font-mulisemibold text-white bg-primary-1 border-0 rounded-button shadow;
+
+          background-image: initial;
+        }
+      }
+    }
+
     // 1024
     @media (min-width: 1024px) {
       @apply flex flex-row flex-no-wrap items-center justify-center;
@@ -76,8 +97,14 @@
   }
 
   // Pagination Specific
-  .nav--pagination & {
+  .brm-nav--pagination & {
     @apply flex flex-row flex-no-wrap items-center;
+
+    .menu-item {
+      a {
+        @apply text-primary-2;
+      }
+    }
   }
 }
 
@@ -167,7 +194,7 @@
 
 // Navigation Toggle Line
 .brm-nav-toggle__line {
-  @apply block relative w-full h-1 mx-auto bg-white;
+  @apply block relative w-full h-1 mx-auto bg-primary-1;
 
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition-duration: 0.32s;
@@ -177,7 +204,7 @@
     content: "";
     transition-duration: 0.32s;
 
-    @apply absolute pin-l pin-r w-full h-1 bg-white;
+    @apply absolute pin-l pin-r w-full h-1 bg-primary-1;
   }
 
   &::before {

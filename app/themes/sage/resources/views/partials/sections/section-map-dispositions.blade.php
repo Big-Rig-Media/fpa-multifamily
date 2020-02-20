@@ -1,4 +1,4 @@
-<div class="w-full max-w-xl mb-10 mx-auto">
+<div class="hidden md:block w-full max-w-xl mb-10 mx-auto">
   <svg class="states" viewBox="0 0 1048 690">
     <a class="state js-state-filter" href="javascript:void(0)" data-state="WY">
       <path d="M322.954 130.629l-61.12-5.172-9.503 95.014 37.271 3.394 44.446 3.164 49.966 2.418 3.188-95.433z" />

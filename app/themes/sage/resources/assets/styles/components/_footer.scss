@@ -7,11 +7,6 @@
     @apply text-center;
   }
 
-  // 1024
-  @media (min-width: 1024px) {
-    @apply py-16;
-  }
-
   // Splash Specific
   .page-template-template-splash & {
     @apply text-center;

@@ -1,4 +1,9 @@
 // Brand
 .brm-brand {
   @apply inline-flex mb-8 mx-auto;
+
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply w-full max-w-brand mb-0 mx-0;
+  }
 }

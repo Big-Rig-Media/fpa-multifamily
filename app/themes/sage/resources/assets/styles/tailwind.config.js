@@ -53,6 +53,7 @@ let colors = {
   'accent-3': '#f6d6ca',
   'accent-4': '#345c97',
   'accent-5': '#d6c099',
+  'accent-6': '#892406',
 
   'transparent': 'transparent',
 
@@ -640,6 +641,8 @@ module.exports = {
     'custom': '64.125rem',
     'small': '64rem',
     'hr': '714px',
+    'brand': '257px',
+    'card': '723px'
   },
 
 
@@ -918,7 +921,7 @@ module.exports = {
     borderStyle: [],
     borderWidths: [],
     cursor: false,
-    display: [],
+    display: ['responsive'],
     flexbox: ['responsive'],
     float: [],
     fonts: [],
@@ -972,7 +975,27 @@ module.exports = {
   */
 
   plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.gold': {
+          backgroundImage: 'linear-gradient(138deg, #a38242 0%, #ffffff 21%, #a38242 55%)'
+        },
+        '.text-shadow': {
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)'
+        },
+        '.pull-right': {
+          transform: 'translateX(100%)',
+        },
+        '.pull-right-normal': {
+          transform: 'translateX(0)',
+        },
+        '.pull-transition': {
+          transition: 'transform 0.35s ease-in-out'
+        }
+      }
 
+      addUtilities(newUtilities)
+    }
   ],
 
 

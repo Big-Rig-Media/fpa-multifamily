@@ -1,4 +1,9 @@
 // Header
 .brm-header {
-  @apply pt-10 pb-5 border-b-3 border-solid border-primary-2;
+  @apply py-5 border-b-3 border-solid border-primary-2;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply pt-10;
+  }
 }

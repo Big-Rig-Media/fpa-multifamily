@@ -9,6 +9,11 @@
     @apply py-16;
   }
 
+  // Portfolio Page
+  .page-id-16 & {
+    @apply py-0;
+  }
+
   // Splash Specific
   .page-template-template-splash & {
     @apply flex flex-col flex-wrap items-center justify-center;
@@ -39,6 +44,11 @@
     // 1023 <=
     @media (max-width: 1023px) {
       @apply py-16;
+
+      // Portfolio Page
+      .page-id-16 & {
+        @apply py-0;
+      }
     }
   }
 
@@ -56,6 +66,10 @@
 
   &.grey-gradient {
     background-image: radial-gradient(50% 50%, #595959 50%, #2e2e2e 100%);
+  }
+
+  &.red-gradient {
+    background: #892406;
   }
 
   h1,

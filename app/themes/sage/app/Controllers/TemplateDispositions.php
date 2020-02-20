@@ -180,6 +180,26 @@ class TemplateDispositions extends Controller
     }
 
     /**
+     * Get disposition's units
+     *
+     * @param   object  $disposition
+     */
+    public static function units( $disposition )
+    {
+        if ( $disposition ) {
+            $units = get_field('units', $disposition);
+
+            if ( $units ) {
+                return $units;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
      * Get dispositions based on taxonomy
      *
      * @param   object  $term

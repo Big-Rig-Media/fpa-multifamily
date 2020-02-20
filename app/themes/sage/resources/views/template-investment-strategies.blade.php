@@ -11,6 +11,7 @@
         @include('partials.content-page')
       @endwhile
       @include('partials.sections.section-tabbed-data', ['default' => true])
+      {!! do_shortcode('[employee id=157]') !!}
     </div>
   </section>
   @include('partials.sections.section-core-plus')

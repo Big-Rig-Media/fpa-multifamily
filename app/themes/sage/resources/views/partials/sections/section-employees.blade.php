@@ -35,8 +35,8 @@
               @else
                 <h6 class="mt-3 mb-0">{{ $employee->post_title }}</h6>
               @endif
-              @if( TemplateTeam::position($employee) )
-                <span class="block mb-3 text-sm text-primary-1">{{ TemplateTeam::position($employee) }}</span>
+              @if( App::employeePosition($employee) )
+                <span class="block mb-3 text-sm text-primary-1">{{ App::employeePosition($employee) }}</span>
               @endif
             </div>
             @if( $employee->post_content )
@@ -54,8 +54,8 @@
                   </div>
                   <div class="md:w-2/3 md:pl-10">
                     <h6 class="mb-0">{{ $employee->post_title }}</h6>
-                    @if( TemplateTeam::position($employee) )
-                      <span class="block mb-5 text-sm text-primary-1">{{ TemplateTeam::position($employee) }}</span>
+                    @if( App::employeePosition($employee) )
+                      <span class="block mb-5 text-sm text-primary-1">{{ App::employeePosition($employee) }}</span>
                     @endif
                     {!! apply_filters('the_content', $employee->post_content) !!}
                     @if( TemplateTeam::vcard($employee) )

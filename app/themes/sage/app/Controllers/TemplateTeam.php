@@ -29,32 +29,6 @@ class TemplateTeam extends Controller
     }
 
     /**
-     * Get position of employee
-     *
-     * @param   object  $employee
-     */
-    public static function position( $employee )
-    {
-        if ( $employee ) {
-            $terms = get_the_terms($employee, 'employees_job_title');
-
-            if ( $terms ) {
-                $titles = [];
-
-                foreach ( $terms as $term ) {
-                    $titles[] = $term->name;
-                }
-
-                return implode(', ', $titles);
-            }
-
-            return;
-        }
-
-        return;
-    }
-
-    /**
      * Get vcard of employee
      *
      * @param   object  $employee

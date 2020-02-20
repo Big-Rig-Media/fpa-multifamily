@@ -14,7 +14,7 @@
     <main class="bg-center bg-no-repeat bg-cover bg-fixed">
       @if(App\display_layout())
         <section class="brm-section brm-section--intro">
-          <div class="brm-container">
+          <div class="brm-container brm-container--small">
             @yield('content')
           </div>
         </section>

@@ -27,7 +27,15 @@
 
 // Flex Stack
 .brm-container--flex-stack {
-  @apply flex flex-col flex-wrap relative;
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply flex flex-row items-center justify-between;
+  }
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply flex flex-col flex-wrap relative;
+  }
 }
 
 // Small

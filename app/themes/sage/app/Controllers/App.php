@@ -319,6 +319,11 @@ class App extends Controller
         return;
     }
 
+    /**
+     * Get employee
+     *
+     * @param   int  $id
+     */
     public static function employee( $id )
     {
         if ( $id ) {
@@ -329,6 +334,127 @@ class App extends Controller
 
             if ( $query->have_posts() ) {
                 return $query->post;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get position of employee
+     *
+     * @param   object  $employee
+     */
+    public static function employeePosition( $employee )
+    {
+        if ( $employee ) {
+            $terms = get_the_terms($employee, 'employees_job_title');
+
+            if ( $terms ) {
+                $titles = [];
+
+                foreach ( $terms as $term ) {
+                    $titles[] = $term->name;
+                }
+
+                return implode(', ', $titles);
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get phone of employee
+     *
+     * @param   object  $employee
+     */
+    public static function employeePhone( $employee )
+    {
+        if ( $employee ) {
+            $phone = get_field('employee_phone', $employee);
+
+            if ( $phone ) {
+                return $phone;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get fax of employee
+     *
+     * @param   object  $employee
+     */
+    public static function employeeFax( $employee )
+    {
+        if ( $employee ) {
+            $fax = get_field('employee_fax', $employee);
+
+            if ( $fax ) {
+                return $fax;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get email of employee
+     *
+     * @param   object  $employee
+     */
+    public static function employeeEmail( $employee )
+    {
+        if ( $employee ) {
+            $email = get_field('employee_email', $employee);
+
+            if ( $email ) {
+                return $email;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get office of employee
+     *
+     * @param   object  $employee
+     */
+    public static function employeeOffice( $employee )
+    {
+        if ( $employee ) {
+            $terms = get_the_terms($employee, 'employees_office');
+
+            if ( $terms ) {
+                $query = new \WP_Query([
+                    'post_type' => 'offices',
+                    's'         =>  $terms[0]->name
+                ]);
+
+                if ( $query->have_posts() ) {
+                    $address = get_field('office_address', $query->post);
+
+                    if ( $address ) {
+                        return $address;
+                    }
+
+                    return;
+                }
+
+                return;
             }
 
             return;

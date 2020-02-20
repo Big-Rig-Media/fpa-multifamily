@@ -21,28 +21,6 @@ apply_filters('excerpt_length', function($length) {
 }, 999);
 
 /**
- * Row
- *
- * @param   array   $atts
- */
-add_shortcode('row', function($atts, $content = null) {
-    return '<div class="row">'.do_shortcode($content).'</div>';
-});
-
-/**
- * Column
- *
- * @param   array   $atts
- */
-add_shortcode('column', function($atts, $content = null) {
-    extract(shortcode_atts([
-        'columns' => 6,
-    ], $atts));
-
-    return '<div class="col md:col-'.$columns.'">'.do_shortcode($content).'</div>';
-});
-
-/**
  * Numbered Pagination
  *
  * @param   object  $query
@@ -60,8 +38,8 @@ function pagination( $query ) {
     ]);
 
     if ( is_array($pagination) ) {
-        $output = '<nav class="nav nav--pagination">
-                        <ol class="nav__list">';
+        $output = '<nav class="brm-nav brm-nav--pagination">
+                        <ol class="brm-nav__list">';
 
         foreach ($pagination as $page) {
             $output .= '<li class="menu-item">'.$page.'</li>';
