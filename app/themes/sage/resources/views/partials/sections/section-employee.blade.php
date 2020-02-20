@@ -19,12 +19,12 @@
           <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>
         @endif
         @if( App::employeePhone($employee) || App::employeeFax($employee) || App::employeeEmail($employee) )
-          <div class="flex flex-row flex-no-wrap items-center">
+          <div class="flex flex-col md:flex-row md:flex-no-wrap md:items-center md:justify-between">
             @if( App::employeePhone($employee) )
-              <span><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> &#124;</span>
+              <span><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
             @endif
             @if( App::employeeFax($employee) )
-              <span><strong>Fax:</strong> {{ App::employeeFax($employee) }} &#124;</span>
+              <span><strong>Fax:</strong> {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
             @endif
             @if( App::employeeEmail($employee) )
               <span><strong>Email:</strong> <a class="text-current no-underline" href="mailt:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
