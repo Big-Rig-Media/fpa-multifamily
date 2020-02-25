@@ -18,7 +18,7 @@ class FrontPage extends Controller
     {
         $query = new \WP_Query([
             'post_type'         => 'acquisitions',
-            'posts_per_page'    => 12
+            'posts_per_page'    => 6
         ]);
 
         if ( $query->have_posts() ) {
@@ -35,7 +35,7 @@ class FrontPage extends Controller
     {
         $query = new \WP_Query([
             'post_type'         => 'dispositions',
-            'posts_per_page'    => 12
+            'posts_per_page'    => 6
         ]);
 
         if ( $query->have_posts() ) {

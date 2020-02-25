@@ -267,10 +267,10 @@ class App extends Controller
     public static function capitalization( $object )
     {
         if ( $object ) {
-            $capitalization = get_field('capitalization', $object);
+            $capitalization = (int) get_field('capitalization', $object);
 
             if ( $capitalization ) {
-                return $capitalization;
+                return number_format($capitalization);
             }
 
             return;

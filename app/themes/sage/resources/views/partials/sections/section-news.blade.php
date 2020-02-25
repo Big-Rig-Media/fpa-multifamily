@@ -5,7 +5,7 @@
       <div class="-mx-base md:-mx-0 grid-news js-carousel-news">
         @foreach( $posts as $post )
           <div class="px-2 md:px-0">
-            <div class="flex flex-col flex-wrap p-5 text-grey-darker bg-white post-card">
+            <div class="flex flex-col flex-wrap h-full p-5 text-grey-darker bg-white post-card">
               <div class="mb-5 pb-5 border-b border-solid border-primary-2">
                 <h6 class="mb-2 font-poyntertextregular">
                   <a class="text-current no-underline" href="{{ App::url($post) }}">{{ $post->post_title }}</a>

@@ -19,7 +19,7 @@
           <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>
         @endif
         @if( App::employeePhone($employee) || App::employeeFax($employee) || App::employeeEmail($employee) )
-          <div class="flex flex-col md:flex-row md:flex-no-wrap md:items-center md:justify-between">
+          <div class="flex flex-col md:flex-row md:flex-no-wrap md:items-center">
             @if( App::employeePhone($employee) )
               <span><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
             @endif
