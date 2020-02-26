@@ -41,7 +41,7 @@
             </div>
             @if( $employee->post_content )
               <div id="{{ $employee->post_name }}" class="shadow hidden">
-                <div class="flex flex-col md:flex-row flex-wrap md:flex-no-wrap md:items-start md:justify-between w-full max-w-xl mx-auto">
+                <div class="flex flex-col md:flex-row flex-wrap md:flex-no-wrap md:items-start md:justify-between relative w-full max-w-xl mx-auto">
                   <div class="md:w-1/3">
                     <img
                       class="border border-solid border-primary-2 rounded-team-card"
@@ -58,7 +58,7 @@
                       <span class="block mb-5 text-sm text-primary-1">{{ App::employeePosition($employee) }}</span>
                     @endif
                     @if( TemplateTeam::vcard($employee) )
-                      <a class="brm-btn brm-btn--primary" href="{{ TemplateTeam::vcard($employee) }}">Download vCard</a>
+                      <a class="md:absolute md:pin-t md:pin-r brm-btn brm-btn--primary" href="{{ TemplateTeam::vcard($employee) }}">Download</a>
                     @endif
                     @if( App::employeeOffice($employee) )
                       <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>

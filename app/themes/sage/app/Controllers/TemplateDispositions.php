@@ -200,6 +200,26 @@ class TemplateDispositions extends Controller
     }
 
     /**
+     * Get disposition's sold date
+     *
+     * @param   object  $disposition
+     */
+    public static function soldDate( $disposition )
+    {
+        if ( $disposition ) {
+            $date = get_field('date_sold', $disposition);
+
+            if ( $date ) {
+                return \DateTime::createFromFormat('Ymd', $date);
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
      * Get dispositions based on taxonomy
      *
      * @param   object  $term

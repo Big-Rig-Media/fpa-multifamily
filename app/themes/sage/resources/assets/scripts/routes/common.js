@@ -128,6 +128,8 @@ export default {
     // Enable fancybox
     $('[data-fancybox]').fancybox({
       autoFocus: false,
+      smallBtn: false,
+      toolbar: true,
     });
 
     // Handle data tabs

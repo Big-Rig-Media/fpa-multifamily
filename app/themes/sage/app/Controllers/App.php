@@ -445,10 +445,14 @@ class App extends Controller
                 ]);
 
                 if ( $query->have_posts() ) {
-                    $address = get_field('office_address', $query->post);
+                    $address1 = get_field('street_address_1', $query->post) ?: null;
+                    $address2 = get_field('street_address_2', $query->post) ?: null;
+                    $city = get_field('city', $query->post) ?: null;
+                    $state = get_field('state', $query->post) ?: null;
+                    $zipcode = get_field('zipcode', $query->post) ?: null;
 
-                    if ( $address ) {
-                        return $address;
+                    if ( $address1 || $address2 || $city || $state || $zipcode ) {
+                        return $address1 . ' ' . $address2 . ', ' . $city . ', ' . $state . ' ' . $zipcode;
                     }
 
                     return;

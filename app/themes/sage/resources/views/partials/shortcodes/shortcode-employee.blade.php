@@ -3,8 +3,8 @@
     $primary_color = $background === 'white' ? 'text-primary-1' : 'text-white';
     $accent_color = $background === 'white' ? 'text-black' : 'text-white';
   @endphp
-  <div id="{{ $employee->post_name }}" class="w-full max-w-card my-10 mx-auto bg-{{ $background }} shadow">
-    <div class="flex flex-col md:flex-row flex-wrap md:flex-no-wrap">
+  <div id="{{ $employee->post_name }}" class="w-full {{ $width }} my-10 mx-auto bg-{{ $background }} shadow">
+    <div class="flex flex-col md:flex-row flex-wrap md:flex-no-wrap {{ $align }}">
       @if( App::image($employee->ID, 'w162x181') )
         <img
           loading="lazy"
@@ -14,7 +14,7 @@
           alt="{{ $employee->post_title }}"
         />
       @endif
-      <div class="md:flex md:flex-col md:flex-1 py-10 px-3 {{ $accent_color }} text-left">
+      <div class="md:flex md:flex-col md:flex-1 {{ $padding }} {{ $accent_color }} text-left">
         <h5 class="mb-0 {{ $primary_color }}">{{ $employee->post_title }}</h5>
         @if( App::employeePosition($employee) )
           <span class="block mb-5 text-sm {{ $primary_color }}">{{ App::employeePosition($employee) }}</span>

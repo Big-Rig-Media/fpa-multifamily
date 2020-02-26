@@ -36,10 +36,39 @@ class TemplateAbout extends Controller
     public static function address( $office )
     {
         if ( $office ) {
-            $address = get_field('office_address', $office);
+            $address1 = get_field('street_address_1', $office) ?: null;
+            $address2 = get_field('street_address_2', $office) ?: null;
+            $city = get_field('city', $office) ?: null;
+            $state = get_field('state', $office) ?: null;
+            $zipcode = get_field('zipcode', $office) ?: null;
 
-            if ( $address ) {
-                return 'https://www.google.com/maps/dir/Current+Location/'.urlencode($address).'';
+            if ( $address1 || $address2 || $city || $state || $zipcode ) {
+
+                return 'https://www.google.com/maps/dir/Current+Location/'.urlencode($address1 . ' ' . $address2 . ' ' . $city . ' ' . $state . ' ' . $zipcode).'';
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get formatted address of office
+     *
+     * @param   object  $office
+     */
+    public static function formatAddress( $office )
+    {
+        if ( $office ) {
+            $address1 = get_field('street_address_1', $office) ?: null;
+            $address2 = get_field('street_address_2', $office) ?: null;
+            $city = get_field('city', $office) ?: null;
+            $state = get_field('state', $office) ?: null;
+            $zipcode = get_field('zipcode', $office) ?: null;
+
+            if ( $address1 || $address2 || $city || $state || $zipcode ) {
+                return $address1 . ' ' . $address2 . '<br>' . $city . ', ' . $state . ' ' . $zipcode;
             }
 
             return;

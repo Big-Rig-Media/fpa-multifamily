@@ -7,10 +7,21 @@
   }
 
   tbody tr {
+    + tr {
+      // 1023 <=
+      @media (max-width: 1023px) {
+        @apply block mt-5 pt-5 border-t border-solid border-grey-light;
+      }
+    }
+
     td {
       // 1023 <=
       @media (max-width: 1023px) {
         @apply block w-full;
+
+        &::before {
+          @apply font-mulisemibold;
+        }
 
         &:nth-child(1)::before {
           content: "Property";
@@ -22,6 +33,10 @@
 
         &:nth-child(3)::before {
           content: "Broker";
+        }
+
+        &:nth-child(4)::before {
+          content: "Date Sold";
         }
       }
     }

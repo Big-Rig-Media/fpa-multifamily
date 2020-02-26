@@ -10,7 +10,10 @@ namespace App;
 add_shortcode('employee', function( $atts, $content = null ) {
     extract(shortcode_atts([
         'id'            => 157,
-        'background'    => 'white'
+        'background'    => 'white',
+        'align'         => '',
+        'width'         => 'max-w-card',
+        'padding'       => 'py-10 px-3'
     ], $atts));
 
     $query = new \WP_Query([
@@ -19,7 +22,7 @@ add_shortcode('employee', function( $atts, $content = null ) {
     ]);
 
     if ( $query->have_posts() ) {
-        return \App\template('partials.shortcodes.shortcode-employee', ['employee' => $query->post, 'background' => $background]);
+        return \App\template('partials.shortcodes.shortcode-employee', ['employee' => $query->post, 'background' => $background, 'align' => $align, 'width' => $width, 'padding' => $padding]);
     }
 
     return;

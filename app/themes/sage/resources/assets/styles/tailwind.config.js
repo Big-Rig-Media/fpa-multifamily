@@ -649,7 +649,8 @@ module.exports = {
     'small': '64rem',
     'hr': '714px',
     'brand': '257px',
-    'card': '743px'
+    'card': '743px',
+    'card-modal': '943px',
   },
 
 
@@ -948,7 +949,7 @@ module.exports = {
     overflow: [],
     padding: ['responsive'],
     pointerEvents: false,
-    position: [],
+    position: ['responsive'],
     resize: false,
     shadows: [],
     svgFill: [],
@@ -998,8 +999,11 @@ module.exports = {
           transform: 'translateX(0)',
         },
         '.pull-transition': {
-          transition: 'transform 0.35s ease-in-out'
-        }
+          transition: 'transform 0.35s ease-in-out',
+        },
+        '.no-transition': {
+          transition: 'none',
+        },
       }
 
       addUtilities(newUtilities)

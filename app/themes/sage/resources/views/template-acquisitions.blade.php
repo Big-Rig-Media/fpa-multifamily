@@ -12,11 +12,11 @@
       @endwhile
       @include('partials.sections.section-map-acquisitions')
       <div class="hidden">
-        {!! do_shortcode('[employee id=123 background=ford]') !!}
-        {!! do_shortcode('[employee id=148 background=ronak]') !!}
-        {!! do_shortcode('[employee id=149 background=dan]') !!}
-        {!! do_shortcode('[employee id=150 background=dana]') !!}
-        {!! do_shortcode('[employee id=151 background=parker]') !!}
+        {!! do_shortcode('[employee id=123 background=ford align=md:items-start width=max-w-small padding="py-0 px-5"]') !!}
+        {!! do_shortcode('[employee id=148 background=ronak align=md:items-start width=max-w-small padding="py-0 px-5"]') !!}
+        {!! do_shortcode('[employee id=149 background=dan align=md:items-start width=max-w-small padding="py-0 px-5"]') !!}
+        {!! do_shortcode('[employee id=150 background=dana align=md:items-start width=max-w-small padding="py-0 px-5"]') !!}
+        {!! do_shortcode('[employee id=151 background=parker align=md:items-start width=max-w-small padding="py-0 px-5"]') !!}
       </div>
     </div>
   </section>
