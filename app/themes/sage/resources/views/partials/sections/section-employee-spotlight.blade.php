@@ -23,9 +23,9 @@
           </div>
         @endforeach
       </div>
-      <span class="block text-center">
+      <p class="text-center">
         <a class="brm-btn brm-btn--secondary" href="{{ get_permalink(34) }}">Meet the Whole Team</a>
-      </span>
+      </p>
     </div>
   </section>
 @endif

@@ -190,6 +190,7 @@ add_action('init', function() {
         switch ( get_post_meta($_GET['post'], '_wp_page_template', true) ) {
             case 'views/template-accessibility.blade.php':
             case 'views/template-home.blade.php':
+            case 'views/template-portfolio.blade.php':
             case 'views/template-privacy-policy.blade.php':
                 remove_post_type_support('page', 'editor');
             break;

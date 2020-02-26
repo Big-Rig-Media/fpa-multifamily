@@ -1,13 +1,16 @@
 @if( get_field('fpa_offices_content') )
-  <section class="brm-section brm-section--offices">
+  <section id="our-offices" class="brm-section brm-section--offices">
     <div class="text-black text-center brm-container brm-container--small">
       <h2>FPA Offices</h2>
       {!! get_field('fpa_offices_content') !!}
+      @include('partials.sections.section-map-offices')
       @if( $offices )
         <ul class="md:hidden list-reset">
           @foreach( $offices as $office )
             <li class="w-full mb-5 text-left">
-              <h6 class="mb-0">{{ $office->post_title }}</h6>
+              <h6 class="mb-0">
+                <a class="text-current no-underline" href="{{ TemplateAbout::address($office) }}">{{ $office->post_title }}</a>
+              </h6>
               @if( get_field('office_address', $office) )
                 <span class="block">
                   <a class="text-primary-1 no-underline" href="{{ TemplateAbout::address($office) }}">{{ get_field('office_address', $office) }}</a>

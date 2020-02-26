@@ -24,7 +24,7 @@ li:not([class]) + li:not([class]) {
 }
 
 hr {
-  @apply block h-px my-8 bg-white;
+  @apply block h-px my-8 bg-grey-light;
 
   clear: both;
 

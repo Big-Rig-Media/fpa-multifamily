@@ -10,7 +10,7 @@
           •
           <span class="text-grey-dark">{{ get_the_author_meta('display_name', $post->post_author) }}</span>
         </span>
-        {!! apply_filters('the_content', wp_trim_words($post->post_content, 10, '...')) !!}
+        {!! apply_filters('the_content', $post->post_content) !!}
       </div>
       @if( App::url($post) )
         <a class="ml-auto mr-0 brm-btn brm-btn--primary" href="{{ App::url($post) }}">Read More</a>

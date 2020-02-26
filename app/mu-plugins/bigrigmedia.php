@@ -56,22 +56,6 @@ class BigRigMedia
   public function init()
   {
     // Create custom post types
-    register_post_type('acquisitions', [
-      'label'                 => 'Acquisitions',
-      'public'                => false,
-      'publicly_queryable'    => false,
-      'show_ui'               => true,
-      'show_in_menu'          => true,
-      'query_var'             => true,
-      'rewrite'               => ['slug' => 'acquisitions', 'with_front' => false],
-      'capability_type'       => 'post',
-      'has_archive'           => false,
-      'hierarchical'          => false,
-      'menu_position'         => null,
-      'menu_icon'             => 'data:image/svg+xml;base64,' . base64_encode('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#a0a5aa" d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z"/></svg>'),
-      'supports'              => ['thumbnail','title']
-    ]);
-
     register_post_type('brokers', [
       'label'                 => 'Brokers',
       'public'                => false,
@@ -138,6 +122,13 @@ class BigRigMedia
 
     // Set taxonomies
     $taxonomies = [
+      'Dispositions Acquisition' => [
+        'public'        => false,
+        'label'         => 'Acquisition',
+        'url'           => 'acquisition',
+        'hierarchical'  => true,
+        'parent'        => 'dispositions'
+      ],
       'Dispositions Broker' => [
         'public'        => false,
         'label'         => 'Broker',
@@ -177,6 +168,13 @@ class BigRigMedia
         'public'        => false,
         'label'         => 'Job Title',
         'url'           => 'title',
+        'hierarchical'  => true,
+        'parent'        => 'employees'
+      ],
+      'Employees Territory' => [
+        'public'        => false,
+        'label'         => 'Territory',
+        'url'           => 'territory',
         'hierarchical'  => true,
         'parent'        => 'employees'
       ]
@@ -295,6 +293,7 @@ class BigRigMedia
     $columns = [
       'cb'            => '<input type="checkbox" />',
       'title'         => __('Title'),
+      'acquisition'   => __('Acquisition'),
       'broker'        => __('Broker'),
       'city'          => __('City'),
       'state'         => __('State'),
@@ -357,6 +356,16 @@ class BigRigMedia
     $output = [];
 
     switch( $column_name ) {
+      // Acquisition
+      case 'acquisition':
+        $terms = get_the_terms( $post_id, 'dispositions_acquisition' );
+
+        if ( !empty( $terms ))  {
+          foreach ( $terms as $term ) {
+            $output[] = $term->name;
+          }
+        }
+      break;
       // Broker
       case 'broker':
         $terms = get_the_terms( $post_id, 'dispositions_broker' );

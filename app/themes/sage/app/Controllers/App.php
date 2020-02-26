@@ -213,8 +213,8 @@ class App extends Controller
      * @return  string  The default copyright
      */
     public function copyright() {
-        return '<p class="mb-3 text-xs font-mulilight">&copy '.date('Y').' '.self::siteName().'. All Rights Reserved.</p>
-                <p class="text-xs font-mulilight">Investment Advisory Services offered through FPA Real Estate Advisers Group, LLC an afiliate of FPA Multi Family, LLC an SEC Registered Investment Adviser. Please see important disclaimers.</p>';
+        return '<p class="mb-3 text-xs font-mulilight">&copy '.date('Y').' '.self::siteName().'. All Rights Reserved. Website by <a class="text-current no-underline" href="https://www.bigrigmedia.com/custom-website-development/">Big Rig Media LLC</a> &reg;</p>
+        <p class="text-xs font-mulilight">Investment Advisory Services offered through FPA Real Estate Advisers Group, LLC an afiliate of FPA Multi Family, LLC an SEC Registered Investment Adviser. Please see important <a class="text-current no-underline" href="'.get_permalink(1867).'">disclaimers</a>.</p>';
     }
 
     /**
@@ -452,6 +452,31 @@ class App extends Controller
                     }
 
                     return;
+                }
+
+                return;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    public static function employeeTerritory( $employee )
+    {
+        if ( $employee ) {
+            $terms = get_the_terms($employee, 'employees_territory');
+
+            if ( $terms ) {
+                $territories = [];
+
+                foreach ( $terms as $term ) {
+                    $territories[] = $term->name;
+                }
+
+                if ( $territories ) {
+                    return implode(', ', $territories);
                 }
 
                 return;

@@ -4,7 +4,9 @@
       <h2 class="text-center">FPA & Affliates</h2>
       {!! get_field('fpa_affliates_content') !!}
       @include('partials.sections.section-affliate-stats')
-      </div>
+      <p class="mt-5 text-center">
+        <a class="brm-btn brm-btn--primary" href="{{ get_permalink(16) }}">Portfolio</a>
+      </p>
     </div>
   </section>
 @endif

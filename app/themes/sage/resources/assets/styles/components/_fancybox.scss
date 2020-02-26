@@ -1,6 +1,14 @@
 // Close Button
 .fancybox-slide--html .fancybox-close-small {
   @apply mt-3 mr-3 p-0;
+
+  .page-template-template-acquisitions & {
+    @apply text-white;
+  }
+
+  .page-template-template-team & {
+    @apply text-primary-2;
+  }
 }
 
 // Background

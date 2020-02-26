@@ -3,7 +3,12 @@
     <div class="text-black text-center brm-container brm-container--small">
       {!! get_field('core_plus_content') !!}
       @include('partials.sections.section-tabbed-data', ['default' => false])
-      {!! do_shortcode('[employee id=157]') !!}
+      @if( get_field('core_plus_employee_shortcode') )
+        {!! do_shortcode('[employee id='.get_field('core_plus_employee_shortcode').']') !!}
+      @endif
+      @if( get_field('core_plus_employee_additional_shortcode') )
+        {!! do_shortcode('[employee id='.get_field('core_plus_employee_additional_shortcode').']') !!}
+      @endif
     </div>
   </section>
 @endif

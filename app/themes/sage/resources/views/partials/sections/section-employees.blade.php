@@ -57,10 +57,29 @@
                     @if( App::employeePosition($employee) )
                       <span class="block mb-5 text-sm text-primary-1">{{ App::employeePosition($employee) }}</span>
                     @endif
-                    {!! apply_filters('the_content', $employee->post_content) !!}
                     @if( TemplateTeam::vcard($employee) )
-                      <a href="{{ TemplateTeam::vcard($employee) }}">Download vCard</a>
+                      <a class="brm-btn brm-btn--primary" href="{{ TemplateTeam::vcard($employee) }}">Download vCard</a>
                     @endif
+                    @if( App::employeeOffice($employee) )
+                      <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>
+                    @endif
+                    @if( App::employeePhone($employee) || App::employeeFax($employee) || App::employeeEmail($employee) )
+                      <div class="flex flex-col md:flex-row md:flex-no-wrap md:items-center mb-3">
+                        @if( App::employeePhone($employee) )
+                          <span><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
+                        @endif
+                        @if( App::employeeFax($employee) )
+                          <span><strong>Fax:</strong> {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
+                        @endif
+                        @if( App::employeeEmail($employee) )
+                          <span><strong>Email:</strong> <a class="text-current no-underline" href="mailto:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
+                        @endif
+                      </div>
+                    @endif
+                    @if( App::employeeTerritory($employee) )
+                      <span class="block mb-5"><strong>Territories:</strong> {{ App::employeeTerritory($employee) }}</span>
+                    @endif
+                    {!! apply_filters('the_content', $employee->post_content) !!}
                   </div>
                 </div>
               </div>

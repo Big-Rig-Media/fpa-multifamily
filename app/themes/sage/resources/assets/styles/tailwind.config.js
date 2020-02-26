@@ -649,7 +649,7 @@ module.exports = {
     'small': '64rem',
     'hr': '714px',
     'brand': '257px',
-    'card': '723px'
+    'card': '743px'
   },
 
 
@@ -804,7 +804,7 @@ module.exports = {
     default: '1px 1px 2px 1px rgba(0,0,0,0.13)',
     'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-    'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+    'inner': 'inset 1px 1px 2px 1px rgba(0,0,0,0.13)',
     'outline': '0 0 0 3px rgba(82,93,220,0.3)',
     'none': 'none',
   },
@@ -954,7 +954,7 @@ module.exports = {
     svgFill: [],
     svgStroke: false,
     tableLayout: false,
-    textAlign: [],
+    textAlign: ['responsive'],
     textColors: [],
     textSizes: [],
     textStyle: [],

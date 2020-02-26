@@ -87,14 +87,16 @@
                             <span class="block"><strong>{{ TemplateDispositions::broker($disposition)->post_title }}</strong></span>
                             <span class="block">{{ TemplateDispositions::company(TemplateDispositions::broker($disposition)) }}</span>
                             <span class="block">
-                              <a href="tel:{{ preg_replace('/[^0-9]/', '', TemplateDispositions::phone(TemplateDispositions::broker($disposition))) }}">{{ TemplateDispositions::phone(TemplateDispositions::broker($disposition)) }}</a>
+                              <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', TemplateDispositions::phone(TemplateDispositions::broker($disposition))) }}">{{ TemplateDispositions::phone(TemplateDispositions::broker($disposition)) }}</a>
                             </span>
                             <span class="block mt-5">
                               <a class="brm-btn brm-btn--primary" href="mailto:{{ TemplateDispositions::email(TemplateDispositions::broker($disposition)) }}?subject=Disposition Inquiry {{ $disposition->post_title }}&body=Please send me more information regarding the disposition offering for {{ $disposition->post_title }} in {{ TemplateDispositions::city($disposition) }}, {{ TemplateDispositions::state($disposition) }} - {{ TemplateDispositions::units($disposition) }} units">Email</a>
                             </span>
                           @endif
                         </td>
-                        <td class="w-1/6 py-2 align-text-top"></td>
+                        <td class="w-1/6 py-2 align-text-top">
+                          <span class="block md:text-right">Date Sold</span>
+                        </td>
                       </tr>
                     @endforeach
                   @endif

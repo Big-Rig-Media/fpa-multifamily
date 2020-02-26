@@ -211,10 +211,17 @@ class TemplateDispositions extends Controller
                 'post_type'         => 'dispositions',
                 'posts_per_page'    => -1,
                 'tax_query'         => [
+                    'relation'     => 'AND',
                     [
                         'taxonomy' => $term->taxonomy,
                         'field'    => 'slug',
                         'terms'    => $term->slug
+                    ],
+                    [
+                        'taxonomy' => 'dispositions_acquisition',
+                        'slug'     => 'slug',
+                        'terms'    => 'yes',
+                        'operator' => 'NOT IN'
                     ]
                 ]
             ]);
