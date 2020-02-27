@@ -227,29 +227,29 @@ module.exports = {
       'Arial',
       'serif',
     ],
-    poyntertextbold: [
-      'poyntertextbold',
+    poynteroldstyledisplayregular: [
+      'Poynter Oldstyle Disp Reg',
       'Helvetica Neue',
       'Helvetica',
       'Arial',
       'serif',
     ],
-    poyntertextromanoneregular: [
-      'poyntertextromanoneregular',
+    poynteroldstyledisplayitalic: [
+      'Poynter Oldstyle Disp It',
       'Helvetica Neue',
       'Helvetica',
       'Arial',
       'serif',
     ],
-    poyntertextregular: [
-      'poyntertextregular',
+    poynteroldstyledisplaybold: [
+      'Poynter Oldstyle Disp Bd',
       'Helvetica Neue',
       'Helvetica',
       'Arial',
       'serif',
     ],
-    poyntertextitalicfour: [
-      'poyntertextitalicfour',
+    poynteroldstyledisplaysemibold: [
+      'Poynter Oldstyle Disp Semi Bd',
       'Helvetica Neue',
       'Helvetica',
       'Arial',

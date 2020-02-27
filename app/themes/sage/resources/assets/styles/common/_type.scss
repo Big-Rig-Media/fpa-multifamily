@@ -15,7 +15,7 @@ h5 {
 
 h5,
 h6 {
-  @apply font-poyntertextbold;
+  @apply font-poynteroldstyledisplaybold;
 }
 
 h1 {
@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-  @apply text-4xl font-poyntertextromanoneregular;
+  @apply text-4xl font-poynteroldstyledisplayregular;
 
   // 1024
   @media (min-width: 1024px) {
@@ -39,7 +39,7 @@ h2 {
 }
 
 h3 {
-  @apply text-3xl font-poyntertextitalicfour;
+  @apply text-3xl font-poynteroldstyledisplayitalic;
 }
 
 h4 {

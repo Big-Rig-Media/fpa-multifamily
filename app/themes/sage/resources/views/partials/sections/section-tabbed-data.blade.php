@@ -17,7 +17,7 @@
           @if( have_rows($data) )
             @while( have_rows($data) ) @php the_row() @endphp
               <div class="flex flex-col flex-wrap w-full md:w-auto mb-4 md:mb-0 mx-1 py-5 px-5 bg-white shadow">
-                <span class="text-5xl text-md:5xl font-poyntertextromanoneregular leading-none text-primary-2">{{ get_sub_field($number) }}</span>
+                <span class="text-5xl text-md:5xl font-poynteroldstyledisplaysemibold leading-none text-primary-2">{{ get_sub_field($number) }}</span>
                 <span class="mt-5 text-xl text-primary-1">{{ get_sub_field($text) }}</span>
               </div>
             @endwhile

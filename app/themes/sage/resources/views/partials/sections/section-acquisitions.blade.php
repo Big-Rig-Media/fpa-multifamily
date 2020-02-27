@@ -10,7 +10,7 @@
             @endif
             <h6 class="mt-3 mb-0">{{ $acquisition->post_title }}</h6>
             @if( App::capitalization($acquisition) )
-              <span class="block text-primary-1"><strong>Capitalization:</strong> {{ App::capitalization($acquisition) }}</span>
+              <span class="block text-primary-1"><strong>Capitalization:</strong> &#36;{{ App::capitalization($acquisition) }}</span>
             @endif
             @if( App::units($acquisition) )
               <span class="block text-primary-1"><strong>Units:</strong> {{ App::units($acquisition) }}</span>

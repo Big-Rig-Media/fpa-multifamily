@@ -10,7 +10,7 @@
         $text = $i === 0 ? 'text-white' : 'text-primary-1';
       @endphp
       <div class="flex flex-col flex-wrap items-center mb-4 md:mb-0 mx-1 py-5 px-5 bg-white shadow {{ $gradient }}">
-        <span class="text-5xl text-md:5xl font-poyntertextromanoneregular leading-none {{ $number }}">{!! get_sub_field('affliate_stat_number') !!}</span>
+        <span class="text-5xl text-md:5xl font-poynteroldstyledisplaysemibold leading-none {{ $number }}">{!! get_sub_field('affliate_stat_number') !!}</span>
         <span class="mt-5 text-xl text-center {{ $text }}">{!! get_sub_field('affliate_stat_text') !!}</span>
       </div>
       @php $i++ @endphp
