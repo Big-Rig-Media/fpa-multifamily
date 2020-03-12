@@ -35,61 +35,46 @@
 }
 
 @font-face {
-  font-family: "muliregular";
+  font-family: "AvenirNextLTPro-Regular";
   src:
-    url("../fonts/muli/muli-webfont.woff2") format("woff2"),
-    url("../fonts/muli/muli-webfont.woff") format("woff");
-  font-weight: normal;
+    url("../fonts/avenir/3B3165_A_0.woff2") format("woff2"),
+    url("../fonts/avenir/3B3165_A_0.woff") format("woff");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "mulisemibold";
+  font-family: "AvenirNextLTPro-Medium";
   src:
-    url("../fonts/muli/muli-semibold-webfont.woff2") format("woff2"),
-    url("../fonts/muli/muli-semibold-webfont.woff") format("woff");
-  font-weight: normal;
+    url("../fonts/avenir/3B3165_B_0.woff2") format("woff2"),
+    url("../fonts/avenir/3B3165_B_0.woff") format("woff");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "mulibold";
+  font-family: "AvenirNextLTPro-Light";
   src:
-    url("../fonts/muli/muli-bold-webfont.woff2") format("woff2"),
-    url("../fonts/muli/muli-bold-webfont.woff") format("woff");
-  font-weight: normal;
+    url("../fonts/avenir/3B3165_8_0.woff2") format("woff2"),
+    url("../fonts/avenir/3B3165_8_0.woff") format("woff");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "mulilight";
+  font-family: "AvenirNextLTPro-LightIt";
   src:
-    url("../fonts/muli/muli-light-webfont.woff2") format("woff2"),
-    url("../fonts/muli/muli-light-webfont.woff") format("woff");
-  font-weight: normal;
+    url("../fonts/avenir/3B3165_7_0.woff2") format("woff2"),
+    url("../fonts/avenir/3B3165_7_0.woff") format("woff");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "muliitalic";
+  font-family: "AvenirNextLTPro-Bold";
   src:
-    url("../fonts/muli/muli-italic-webfont.woff2") format("woff2"),
-    url("../fonts/muli/muli-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "mulisemibolditalic";
-  src:
-    url("../fonts/muli/muli-semi-bolditalic-webfont.woff2") format("woff2"),
-    url("../fonts/muli/muli-semi-bolditalic-webfont.woff") format("woff");
-  font-weight: normal;
+    url("../fonts/avenir/3B3165_0_0.woff2") format("woff2"),
+    url("../fonts/avenir/3B3165_0_0.woff") format("woff");
   font-style: normal;
   font-display: swap;
 }

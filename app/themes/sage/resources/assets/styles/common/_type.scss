@@ -19,7 +19,7 @@ h6 {
 }
 
 h1 {
-  @apply text-5xl font-muliregular uppercase tracking-wide;
+  @apply text-5xl font-avenirnextmedium uppercase tracking-wide;
 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
@@ -43,7 +43,7 @@ h3 {
 }
 
 h4 {
-  @apply text-2xl font-mulibold;
+  @apply text-2xl font-avenirnextbold;
 }
 
 h5 {
@@ -77,12 +77,12 @@ i {
 
 strong,
 b {
-  @apply font-mulibold;
+  @apply font-avenirnextbold;
 }
 
 em,
 i {
-  @apply font-muliitalic;
+  @apply font-avenirnextlightitalic;
 }
 
 a:not([class]) {

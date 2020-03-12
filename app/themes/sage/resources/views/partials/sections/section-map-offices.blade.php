@@ -1728,7 +1728,7 @@
 
   </text>
   <text transform="translate(48.94 268.32)">
-    <tspan x="0" y="0" fill="#C27863" class="text-xl font-mulibold">San Francisco, CA</tspan>
+    <tspan x="0" y="0" fill="#C27863" class="text-xl font-avenirnextbold">San Francisco, CA</tspan>
   </text>
   <text transform="translate(225.928 268.32)" fill="#C27863">
 
@@ -1746,7 +1746,7 @@
 
   </text>
   <text transform="translate(123.178 364.509)">
-    <tspan x="0" y="0" fill="#82A394" class="text-xl font-mulibold">Irvine, CA</tspan>
+    <tspan x="0" y="0" fill="#82A394" class="text-xl font-avenirnextbold">Irvine, CA</tspan>
   </text>
   <text transform="translate(221.961 364.509)" fill="#82A394">
 
@@ -1764,7 +1764,7 @@
 
   </text>
   <text transform="translate(692.44 221.237)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-mulibold">Chicago, IL</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Chicago, IL</tspan>
   </text>
   <text transform="translate(829.268 253.552)">
     <tspan x="0" y="0" fill="#1C3D69" class="text-sm">2101 Wilson Blvd. | Arlington, VA</tspan>
@@ -1773,7 +1773,7 @@
 
   </text>
   <text transform="translate(829.268 275.552)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-mulibold">Washington D.C.</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Washington D.C.</tspan>
   </text>
   <text transform="translate(590.173 108.476)">
     <tspan x="0" y="0" fill="#1C3D69" class="text-sm">3600 American Boulevard West</tspan>
@@ -1782,7 +1782,7 @@
 
   </text>
   <text transform="translate(590.173 130.476)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-mulibold">Bloomington, MN</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Bloomington, MN</tspan>
   </text>
   <text transform="translate(590.173 158.976)">
     <tspan x="0" y="0" fill="#1C3D69" class="text-sm">720.583.1810</tspan>
@@ -1794,7 +1794,7 @@
 
   </text>
   <text transform="translate(786.268 386.214)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-mulibold">Atlanta, GA</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Atlanta, GA</tspan>
   </text>
   <text transform="translate(786.268 414.714)">
     <tspan x="0" y="0" fill="#1C3D69" class="text-sm">770.415.1880</tspan>
@@ -1806,7 +1806,7 @@
 
   </text>
   <text transform="translate(529.5 418.808)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-mulibold">Dallas, TX</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Dallas, TX</tspan>
   </text>
   <text transform="translate(529.5 447.308)">
     <tspan x="0" y="0" fill="#1C3D69" class="text-sm">FPA 214.965.9534 || TPC 214.965.9523</tspan>

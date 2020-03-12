@@ -9992,7 +9992,7 @@
         <stop offset="1" stop-color="#0f1f33"/>
       </radialGradient>
       <path clip-path="url(#Ft)" fill="url(#Fu)" d="M282.072 643.988l28 28-28 28-28-28z"/>
-      <text transform="translate(304.418 668.92)" fill="#1C3D69">Realized: </text>
+      <text transform="translate(304.418 668.92)" fill="#1C3D69" >Realized: </text>
       <text transform="translate(372.654 668.92)" fill="#1C3D69">Approximately {{ get_field('realized_total') }} </text>
       <text transform="translate(304.418 688.42)" fill="#1C3D69"> buildings totalling {{ get_field('realized_buildings_total') }} units</text>
     </g>

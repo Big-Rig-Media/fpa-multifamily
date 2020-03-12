@@ -53,10 +53,10 @@
               <table class="w-full text-base text-left dispositions">
                 <thead>
                   <tr>
-                    <th class="w-1/2 py-2 font-mulilight font-normal align-text-top border-b border-solid border-black">Property</th>
-                    <th class="w-1/6 py-2 font-mulilight font-normal align-text-top border-b border-solid border-black">Units</th>
-                    <th class="w-1/6 py-2 font-mulilight font-normal align-text-top border-b border-solid border-black">Broker</th>
-                    <th class="w-1/6 py-2 font-mulilight font-normal align-text-top border-b border-solid border-black"></th>
+                    <th class="w-1/2 py-2 font-avenirnextlight font-normal align-text-top border-b border-solid border-black">Property</th>
+                    <th class="w-1/6 py-2 font-avenirnextlight font-normal align-text-top border-b border-solid border-black">Units</th>
+                    <th class="w-1/6 py-2 font-avenirnextlight font-normal align-text-top border-b border-solid border-black">Broker</th>
+                    <th class="w-1/6 py-2 font-avenirnextlight font-normal align-text-top border-b border-solid border-black"></th>
                   </tr>
                 </thead>
                 <tbody class="data">

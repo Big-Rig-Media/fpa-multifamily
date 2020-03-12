@@ -494,158 +494,158 @@
       </g>
     </a>
     <g>
-      <text transform="translate(123.946 527.21)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(123.946 527.21)" fill="#fff" class="text-sm font-avenirnextbold">
         HI
       </text>
-      <text transform="translate(279.52 564.783)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(279.52 564.783)" fill="#fff" class="text-sm font-avenirnextbold">
         AK
       </text>
-      <text transform="translate(217.916 384.42)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(217.916 384.42)" fill="#fff" class="text-sm font-avenirnextbold">
         AZ
       </text>
-      <text transform="translate(234.066 272.022)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(234.066 272.022)" fill="#fff" class="text-sm font-avenirnextbold">
         UT
       </text>
-      <text transform="translate(129.819 248.98)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(129.819 248.98)" fill="#fff" class="text-sm font-avenirnextbold">
         NV
       </text>
-      <text transform="translate(65.38 304.055)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(65.38 304.055)" fill="#fff" class="text-sm font-avenirnextbold">
         CA
       </text>
-      <text class="font-mulibold" transform="translate(328.755 392.852)" fill="#fff" class="text-sm font-mulibold">
+      <text class="font-avenirnextbold" transform="translate(328.755 392.852)" fill="#fff" class="text-sm font-avenirnextbold">
         NM
       </text>
-      <text transform="translate(76.692 134.75)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(76.692 134.75)" fill="#fff" class="text-sm font-avenirnextbold">
         OR
       </text>
-      <text transform="translate(101.66 52.137)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(101.66 52.137)" fill="#fff" class="text-sm font-avenirnextbold">
         WA
       </text>
-      <text transform="translate(312.397 183.18)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(312.397 183.18)" fill="#fff" class="text-sm font-avenirnextbold">
         WY
       </text>
-      <text transform="translate(198.57 156.204)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(198.57 156.204)" fill="#fff" class="text-sm font-avenirnextbold">
         ID
       </text>
-      <text transform="translate(285.035 86.515)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(285.035 86.515)" fill="#fff" class="text-sm font-avenirnextbold">
         MT
       </text>
-      <text transform="translate(446.62 86.515)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(446.62 86.515)" fill="#fff" class="text-sm font-avenirnextbold">
         ND
       </text>
-      <text transform="translate(448.08 153.955)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(448.08 153.955)" fill="#fff" class="text-sm font-avenirnextbold">
         SD
       </text>
-      <text transform="translate(464.176 225.164)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(464.176 225.164)" fill="#fff" class="text-sm font-avenirnextbold">
         NE
       </text>
-      <text transform="translate(345.3 282.196)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(345.3 282.196)" fill="#fff" class="text-sm font-avenirnextbold">
         CO
       </text>
-      <text transform="translate(486.515 295.861)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(486.515 295.861)" fill="#fff" class="text-sm font-avenirnextbold">
         KS
       </text>
-      <text transform="translate(505.309 368.338)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(505.309 368.338)" fill="#fff" class="text-sm font-avenirnextbold">
         OK
       </text>
-      <text transform="translate(479.337 468.825)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(479.337 468.825)" fill="#fff" class="text-sm font-avenirnextbold">
         TX
       </text>
-      <text transform="translate(547.838 107.313)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(547.838 107.313)" fill="#fff" class="text-sm font-avenirnextbold">
         MN
       </text>
-      <text transform="translate(579.992 206.524)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(579.992 206.524)" fill="#fff" class="text-sm font-avenirnextbold">
         IA
       </text>
-      <text transform="translate(600.17 298.608)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(600.17 298.608)" fill="#fff" class="text-sm font-avenirnextbold">
         MO
       </text>
-      <text transform="translate(606.63 375.244)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(606.63 375.244)" fill="#fff" class="text-sm font-avenirnextbold">
         AR
       </text>
-      <text transform="translate(611.486 467.922)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(611.486 467.922)" fill="#fff" class="text-sm font-avenirnextbold">
         LA
       </text>
-      <text transform="translate(640.024 142.364)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(640.024 142.364)" fill="#fff" class="text-sm font-avenirnextbold">
         WI
       </text>
-      <text transform="translate(741.605 169.098)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(741.605 169.098)" fill="#fff" class="text-sm font-avenirnextbold">
         MI
       </text>
-      <text transform="translate(669.557 251.083)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(669.557 251.083)" fill="#fff" class="text-sm font-avenirnextbold">
         IL
       </text>
-      <text transform="translate(722.327 247.517)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(722.327 247.517)" fill="#fff" class="text-sm font-avenirnextbold">
         IN
       </text>
-      <text transform="translate(755.318 298.608)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(755.318 298.608)" fill="#fff" class="text-sm font-avenirnextbold">
         KY
       </text>
-      <text transform="translate(724.62 346.728)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(724.62 346.728)" fill="#fff" class="text-sm font-avenirnextbold">
         TN
       </text>
-      <text transform="translate(669.762 424.677)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(669.762 424.677)" fill="#fff" class="text-sm font-avenirnextbold">
         MS
       </text>
-      <text transform="translate(731.356 418.734)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(731.356 418.734)" fill="#fff" class="text-sm font-avenirnextbold">
         AL
       </text>
-      <text transform="translate(797.242 412.796)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(797.242 412.796)" fill="#fff" class="text-sm font-avenirnextbold">
         GA
       </text>
-      <text transform="translate(859.368 520.917)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(859.368 520.917)" fill="#fff" class="text-sm font-avenirnextbold">
         FL
       </text>
-      <text transform="translate(847.606 376.512)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(847.606 376.512)" fill="#fff" class="text-sm font-avenirnextbold">
         SC
       </text>
-      <text transform="translate(875.85 330.172)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(875.85 330.172)" fill="#fff" class="text-sm font-avenirnextbold">
         NC
       </text>
-      <text transform="translate(870.805 279.677)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(870.805 279.677)" fill="#fff" class="text-sm font-avenirnextbold">
         VA
       </text>
-      <text transform="translate(780.155 228.843)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(780.155 228.843)" fill="#fff" class="text-sm font-avenirnextbold">
         OH
       </text>
-      <text transform="translate(824.797 259.736)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(824.797 259.736)" fill="#fff" class="text-sm font-avenirnextbold">
         WV
       </text>
-      <text transform="translate(994.787 162.991)" class="text-sm font-mulibold text-primary-1">
+      <text transform="translate(994.787 162.991)" class="text-sm font-avenirnextbold text-primary-1">
         RI
       </text>
-      <text transform="translate(944.134 236.714)" class="text-sm font-mulibold text-primary-1">
+      <text transform="translate(944.134 236.714)" class="text-sm font-avenirnextbold text-primary-1">
         DE
       </text>
-      <text transform="translate(956.31 207.264)" class="text-sm font-mulibold text-primary-1">
+      <text transform="translate(956.31 207.264)" class="text-sm font-avenirnextbold text-primary-1">
         NJ
       </text>
-      <text transform="translate(975.833 264.73)" class="text-sm font-mulibold text-primary-1">
+      <text transform="translate(975.833 264.73)" class="text-sm font-avenirnextbold text-primary-1">
         DC
       </text>
       <ellipse cx="967.083" cy="260.526" rx="7.297" ry="7.337" fill="#a38242" />
-      <text transform="translate(871.266 197.597)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(871.266 197.597)" fill="#fff" class="text-sm font-avenirnextbold">
         PA
       </text>
-      <text transform="translate(913.703 138.783)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(913.703 138.783)" fill="#fff" class="text-sm font-avenirnextbold">
         NY
       </text>
-      <text transform="translate(1000.99 53.83)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(1000.99 53.83)" fill="#fff" class="text-sm font-avenirnextbold">
         ME
       </text>
-      <text transform="translate(969.312 113.237)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(969.312 113.237)" fill="#fff" class="text-sm font-avenirnextbold">
         NH
       </text>
-      <text transform="translate(944.493 95.732)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(944.493 95.732)" fill="#fff" class="text-sm font-avenirnextbold">
         VT
       </text>
-      <text transform="translate(963.913 136.943)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(963.913 136.943)" fill="#fff" class="text-sm font-avenirnextbold">
         MA
       </text>
-      <text transform="translate(962.348 156.019)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(962.348 156.019)" fill="#fff" class="text-sm font-avenirnextbold">
         CT
       </text>
-      <text transform="translate(889.843 227.884)" fill="#fff" class="text-sm font-mulibold">
+      <text transform="translate(889.843 227.884)" fill="#fff" class="text-sm font-avenirnextbold">
         MD
       </text>
     </g>

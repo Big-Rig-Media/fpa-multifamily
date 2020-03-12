@@ -13,7 +13,7 @@
       <div class="md:flex md:flex-col md:flex-1 p-10 text-white">
         <h5 class="mb-0 text-white">{{ $employee->post_title }}</h5>
         @if( App::employeePosition($employee) )
-          <span class="block mb-5 text-sm">{{ App::employeePosition($employee) }}</span>
+          <span class="block mb-5 text-base">{{ App::employeePosition($employee) }}</span>
         @endif
         @if( App::employeeOffice($employee) )
           <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>
@@ -21,13 +21,13 @@
         @if( App::employeePhone($employee) || App::employeeFax($employee) || App::employeeEmail($employee) )
           <div class="flex flex-col md:flex-row md:flex-no-wrap md:items-center mb-3">
             @if( App::employeePhone($employee) )
-              <span><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
+              <span>Phone: <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
             @endif
             @if( App::employeeFax($employee) )
-              <span><strong>Fax:</strong> {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
+              <span class="inline-block md:ml-1">Fax: {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
             @endif
             @if( App::employeeEmail($employee) )
-              <span><strong>Email:</strong> <a class="text-current no-underline" href="mailt:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
+              <span class="inline-block md:ml-1">Email: <a class="text-current no-underline" href="mailt:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
             @endif
           </div>
         @endif

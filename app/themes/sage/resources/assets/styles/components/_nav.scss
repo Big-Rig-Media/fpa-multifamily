@@ -41,7 +41,7 @@
 
     // 1024
     @media (min-width: 1024px) {
-      @apply inline-block py-2 px-5 text-sm font-mulisemibold no-underline uppercase border-0 rounded-button shadow;
+      @apply inline-block py-2 px-5 text-sm font-avenirnextmedium no-underline uppercase border-0 rounded-button shadow;
 
       background-image: radial-gradient(50% 100%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%, #f8f8f8 100%);
     }
@@ -64,7 +64,7 @@
 
       .menu-investor-login {
         a {
-          @apply inline-block py-2 px-5 text-sm font-mulisemibold text-white bg-primary-1 border-0 rounded-button shadow;
+          @apply inline-block py-2 px-5 text-sm font-avenirnextmedium text-white bg-primary-1 border-0 rounded-button shadow;
 
           background-image: initial;
         }
@@ -77,7 +77,7 @@
 
       > .menu-item {
         > a {
-          @apply inline-block py-2 px-5 text-xs font-mulisemibold text-primary-1 no-underline uppercase border-0 rounded-button shadow;
+          @apply inline-block py-2 px-5 text-xs font-avenirnextmedium text-primary-1 no-underline uppercase border-0 rounded-button shadow;
 
           background-image: radial-gradient(50% 100%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%, #f8f8f8 100%);
 
@@ -100,7 +100,7 @@
 
       .sub-menu {
         a {
-          @apply inline-block py-2 px-5 text-sm font-mulilight text-primary-2 no-underline rounded-button shadow;
+          @apply inline-block py-2 px-5 text-sm font-avenirnextlight text-primary-2 no-underline rounded-button shadow;
 
           background-color: rgba(255, 255, 255, 0.9);
         }

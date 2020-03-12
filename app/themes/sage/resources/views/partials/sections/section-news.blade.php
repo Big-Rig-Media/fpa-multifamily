@@ -10,10 +10,12 @@
                 <h6 class="mb-2">
                   <a class="text-current no-underline" href="{{ App::url($post) }}">{{ $post->post_title }}</a>
                 </h6>
-                <span class="block mb-3 text-sm font-mulisemibolditalic text-primary-2">
+                <span class="block mb-3 text-sm font-avenirnextmediumitalic text-primary-2">
                   <span>{{ date('F j, Y', strtotime($post->post_date)) }}</span>
-                  •
-                  <span class="text-grey-dark">{{ get_the_author_meta('display_name', $post->post_author) }}</span>
+                  @if( get_field('blog_source_name', $post) )
+                    •
+                    <span class="text-grey-dark">{{ get_field('blog_source_name', $post) }}</span>
+                  @endif
                 </span>
                 {!! apply_filters('the_content', wp_trim_words($post->post_content, 10, '...')) !!}
               </div>
