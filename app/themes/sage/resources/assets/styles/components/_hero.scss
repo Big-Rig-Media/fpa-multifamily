@@ -96,6 +96,10 @@
     background: #892406;
   }
 
+  &.pink-gradient {
+    background-image: radial-gradient(50% 50%, #fad1c4 50%, #d08d7b 100%);
+  }
+
   h1,
   h2,
   h3,
@@ -112,6 +116,13 @@
 
   hr {
     @apply my-5 bg-white;
+  }
+
+  h3 {
+    // ESG Page
+    .page-template-template-esg & {
+      @apply max-w-h3-hero;
+    }
   }
 
   .brm-btn {

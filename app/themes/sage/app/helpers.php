@@ -137,7 +137,8 @@ function display_layout()
     isset($display) || $display = !in_array(true, [
         is_front_page(),
         is_page(),
-        is_home()
+        is_home(),
+        is_page_template(['views/template-esg.blade.php'])
     ]);
 
     return apply_filters('sage/display_layout', $display);

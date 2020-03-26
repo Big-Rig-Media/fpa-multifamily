@@ -11,6 +11,22 @@ use Sober\Controller\Controller;
  */
 class FrontPage extends Controller
 {
+    public function featuredAcquisitions() {
+        if ( get_field('featured_acquisitions') ) {
+            return get_field('featured_acquisitions');
+        }
+
+        return;
+    }
+
+    public function featuredDispositions() {
+        if ( get_field('featured_dispositions') ) {
+            return get_field('featured_dispositions');
+        }
+
+        return;
+    }
+
     /**
      * Get recent acquisitions
      */
@@ -19,6 +35,7 @@ class FrontPage extends Controller
         $query = new \WP_Query([
             'post_type'         => 'dispositions',
             'posts_per_page'    => 6,
+            'post__in'          => self::featuredAcquisitions(),
             'tax_query'         => [
                 [
                     'taxonomy' => 'dispositions_acquisition',
@@ -44,12 +61,13 @@ class FrontPage extends Controller
         $query = new \WP_Query([
             'post_type'         => 'dispositions',
             'posts_per_page'    => 6,
+            'post__in'          => self::featuredDispositions(),
             'tax_query'         => [
                 [
                     'taxonomy' => 'dispositions_acquisition',
                     'slug'     => 'slug',
-                    'terms'    => 'yes',
-                    'operator' => 'NOT IN'
+                    'terms'    => 'no',
+                    'operator' => 'IN'
                 ]
             ]
         ]);

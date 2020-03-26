@@ -54,6 +54,7 @@ let colors = {
   'accent-4': '#345c97',
   'accent-5': '#d6c099',
   'accent-6': '#892406',
+  'accent-7': '#a38242',
 
   'dana': '#fcd4c7',
   'parker': '#cfb58c',
@@ -686,6 +687,7 @@ module.exports = {
     'brand': '257px',
     'card': '743px',
     'card-modal': '943px',
+    'h3-hero': '1027px',
   },
 
 

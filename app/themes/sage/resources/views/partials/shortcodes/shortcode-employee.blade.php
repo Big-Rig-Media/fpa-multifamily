@@ -17,7 +17,7 @@
       <div class="md:flex md:flex-col md:flex-1 {{ $padding }} {{ $accent_color }} text-left">
         <h5 class="mb-0 {{ $primary_color }}">{{ $employee->post_title }}</h5>
         @if( App::employeePosition($employee) )
-          <span class="block mb-5 text-base text-black">{{ App::employeePosition($employee) }}</span>
+          <span class="block mb-5 text-base {{ $accent_color }}">{{ App::employeePosition($employee) }}</span>
         @endif
         @if( App::employeeOffice($employee) )
           <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>

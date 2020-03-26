@@ -32,6 +32,11 @@ hr {
   @media (min-width: 1024px) {
     @apply my-16;
   }
+
+  // ESG Page
+  .page-template-template-esg & {
+    @apply bg-accent-7;
+  }
 }
 
 address {

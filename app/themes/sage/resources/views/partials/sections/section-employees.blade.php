@@ -69,10 +69,10 @@
                           <span><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
                         @endif
                         @if( App::employeeFax($employee) )
-                          <span><strong>Fax:</strong> {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
+                          <span class="inline-block md:ml-1"><strong>Fax:</strong> {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
                         @endif
-                        @if( App::employeeEmail($employee) )
-                          <span><strong>Email:</strong> <a class="text-current no-underline" href="mailto:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
+                        @if( App::employeeEmail($employee) )w
+                          <span class="inline-block md:ml-1"><strong>Email:</strong> <a class="text-current no-underline" href="mailto:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
                         @endif
                       </div>
                     @endif
