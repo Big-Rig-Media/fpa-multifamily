@@ -5,9 +5,18 @@
     @endphp
     @if( $type === 'content' )
       {!! get_sub_field('section_5_builder_content') !!}
+      @if( get_sub_field('section_5_builder_gallery') )
+        <ul class="flex flex-row flex-wrap items-center justify-center mt-10 list-reset">
+          @foreach( get_sub_field('section_5_builder_gallery') as $gallery_item )
+            <li class="mb-5 mx-10 list-none">
+              <img src="{{ $gallery_item['url'] }}"/>
+            </li>
+          @endforeach
+        </ul>
+      @endif
     @elseif( $type === 'card' )
       @if( have_rows('section_5_builder_cards') )
-        <div id="cards-5" class="w-full flex flex-row flex-wrap md:justify-center mb-2">
+        <div id="cards-5" class="w-full flex flex-row flex-wrap md:justify-center mb-5">
           @while( have_rows('section_5_builder_cards') ) @php the_row() @endphp
             @php
               $icon = get_sub_field('section_5_builder_card_icon');

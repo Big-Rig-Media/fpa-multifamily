@@ -14,8 +14,9 @@
               $number = get_sub_field('section_2_builder_card_number');
               $caption = get_sub_field('section_2_builder_card_caption');
             @endphp
-            <div class="flex flex-col flex-wrap items-center w-full md:w-auto mb-4 md:mb-5 mx-3 py-5 px-5 bg-white shadow">
+            <div class="flex flex-col flex-wrap items-center w-full md:w-auto mb-4 md:mb-5 mx-3">
               @if( $icon )
+                <img src="{{ $icon['url'] }}"/>
               @endif
               @if( $number )
                 <span class="text-5xl text-md:5xl font-poynteroldstyledisplaysemibold leading-none text-primary-2">{!! $number !!}</span>

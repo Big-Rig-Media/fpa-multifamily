@@ -192,6 +192,35 @@ export default {
         })
       })
     }
+
+    // Handle number increments
+    if ($('.js-increment').length) {
+      $('.js-increment').each(function () {
+        var numberObject = $(this)
+        var numberTop = numberObject.offset().top
+
+        function incrementNumber(object) {
+          object.prop('counter', 0).animate({
+            counter: object.data('num'),
+          }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function (now) {
+              object.children('span').text(Math.ceil(now).toLocaleString())
+            },
+          })
+        }
+
+        $(window).scroll(function () {
+          var scrollY = $(this).scrollTop()
+          var windowBottom = (scrollY + $(this).innerHeight())
+
+          if (windowBottom >= numberTop) {
+            incrementNumber(numberObject)
+          }
+        })
+      })
+    }
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

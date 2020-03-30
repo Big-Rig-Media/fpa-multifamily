@@ -140,3 +140,37 @@
 .brm-section--pagination {
   @apply py-8;
 }
+
+// ESP Page
+#esg-2 {
+  hr {
+    @apply bg-white;
+  }
+}
+
+#esg-3 {
+  #cards-12 {
+    div:nth-child(2),
+    div:nth-child(3) {
+      @apply border-2 border-solid border-primary-2 rounded-team-card shadow-none;
+    }
+
+    div:nth-child(2) {
+      @apply relative;
+
+      // 1024
+      @media (min-width: 1024px) {
+        &::after {
+          @apply block absolute bg-primary-2;
+
+          content: "";
+          top: 50%;
+          right: -27px;
+          width: 27px;
+          height: 2px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

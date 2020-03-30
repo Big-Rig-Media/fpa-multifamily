@@ -650,6 +650,7 @@ module.exports = {
     'screen': '100vh',
     'mobile:split': '300px',
     'split': '500px',
+    'logo-card': '143px',
   },
 
 
