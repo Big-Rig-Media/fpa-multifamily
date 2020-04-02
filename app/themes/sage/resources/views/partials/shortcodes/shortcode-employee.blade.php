@@ -17,7 +17,7 @@
       <div class="md:flex md:flex-col md:flex-1 {{ $padding }} {{ $accent_color }} text-left">
         <h5 class="mb-0 {{ $primary_color }}">{{ $employee->post_title }}</h5>
         @if( App::employeePosition($employee) )
-          <span class="block mb-5 text-base {{ $accent_color }}">{{ App::employeePosition($employee) }}</span>
+          <span class="block mb-5 text-base {{ $accent_color }}"><em>{{ App::employeePosition($employee) }}</em></span>
         @endif
         @if( App::employeeOffice($employee) )
           <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>
@@ -25,13 +25,13 @@
         @if( App::employeePhone($employee) || App::employeeFax($employee) || App::employeeEmail($employee) )
           <div class="flex flex-col md:flex-row md:flex-no-wrap md:items-center mb-3">
             @if( App::employeePhone($employee) )
-              <span>Phone: <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
+              <span><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
             @endif
             @if( App::employeeFax($employee) )
-              <span class="inline-block md:ml-1">Fax: {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
+              <span class="inline-block md:ml-1"><strong>Fax:</strong> {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
             @endif
             @if( App::employeeEmail($employee) )
-              <span class="inline-block md:ml-1">Email: <a class="text-current no-underline" href="mailto:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
+              <span class="inline-block md:ml-1"><strong>Email:</strong> <a class="text-current no-underline" href="mailto:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
             @endif
           </div>
         @endif

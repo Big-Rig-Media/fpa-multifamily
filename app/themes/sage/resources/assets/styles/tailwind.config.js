@@ -290,6 +290,13 @@ module.exports = {
       'Helvetica',
       'Arial',
       'serif',
+    ],
+    avenirnextdemiitalic: [
+      'AvenirNextLTPro-DemiIt',
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      'serif',
     ]
   },
 

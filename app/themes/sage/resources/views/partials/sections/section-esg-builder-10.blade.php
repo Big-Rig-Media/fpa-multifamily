@@ -40,5 +40,13 @@
       {!! get_sub_field('section_10_builder_content_more') !!}
     @endif
   @endwhile
-  <hr>
+  @if( get_field('section_10_call_to_action_text') && get_field('section_10_call_to_action_url') )
+    <div class="my-8 md:my-16 text-center">
+      <a class="brm-btn brm-btn--primary" href="{{ get_field('section_10_call_to_action_url') }}">
+        {{ get_field('section_10_call_to_action_text') }}
+      </a>
+    </div>
+  @else
+    <hr>
+  @endif
 @endif

@@ -17,14 +17,14 @@
     @elseif( $type === 'card' )
       @if( have_rows('section_11_builder_cards') )
         <p class="text-center"><strong>FPA is a proud Residential Property Management Advisory Board Member at:</strong></p>
-        <div id="cards-10" class="w-full flex flex-row flex-wrap md:justify-center mb-5">
+        <div id="cards-11" class="w-full flex flex-col md:flex-row flex-wrap md:justify-center mb-5">
           @while( have_rows('section_11_builder_cards') ) @php the_row() @endphp
             @php
               $icon = get_sub_field('section_11_builder_card_icon');
               $number = get_sub_field('section_11_builder_card_number');
               $caption = get_sub_field('section_11_builder_card_caption');
             @endphp
-            <div class="text-center">
+            <div class="mb-5 md:mb-0 text-center">
               <div class="flex flex-col flex-wrap items-center justify-center w-full md:w-auto min-h-logo-card mb-4 md:mb-5 mx-3 py-5 px-5 bg-white shadow">
                 @if( $icon )
                   <img class="block my-auto" src="{{ $icon['url'] }}" height="81" />
@@ -43,4 +43,11 @@
       {!! get_sub_field('section_11_builder_content_more') !!}
     @endif
   @endwhile
+  @if( get_field('section_11_call_to_action_text') && get_field('section_11_call_to_action_url') )
+    <div class="my-8 md:my-16 text-center">
+      <a class="brm-btn brm-btn--primary" href="{{ get_field('section_11_call_to_action_url') }}">
+        {{ get_field('section_11_call_to_action_text') }}
+      </a>
+    </div>
+  @endif
 @endif

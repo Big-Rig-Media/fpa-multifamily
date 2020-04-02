@@ -55,7 +55,7 @@
                   <div class="md:w-2/3 md:pl-10">
                     <h6 class="mb-0">{{ $employee->post_title }}</h6>
                     @if( App::employeePosition($employee) )
-                      <span class="block mb-5 text-sm text-primary-1">{{ App::employeePosition($employee) }}</span>
+                      <span class="block mb-5 text-sm text-primary-1"><em>{{ App::employeePosition($employee) }}</em></span>
                     @endif
                     @if( TemplateTeam::vcard($employee) )
                       <a class="md:absolute md:pin-t md:pin-r brm-btn brm-btn--primary" href="{{ TemplateTeam::vcard($employee) }}">Download</a>
@@ -71,7 +71,7 @@
                         @if( App::employeeFax($employee) )
                           <span class="inline-block md:ml-1"><strong>Fax:</strong> {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
                         @endif
-                        @if( App::employeeEmail($employee) )w
+                        @if( App::employeeEmail($employee) )
                           <span class="inline-block md:ml-1"><strong>Email:</strong> <a class="text-current no-underline" href="mailto:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
                         @endif
                       </div>

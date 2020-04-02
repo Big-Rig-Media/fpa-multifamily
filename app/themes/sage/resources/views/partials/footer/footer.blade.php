@@ -1,5 +1,5 @@
 <footer class="bg-primary-3 brm-footer">
-  <div class="brm-container">
+  <div class="brm-container brm-container--small">
     @if( !is_page_template(['views/template-landing.blade.php', 'views/template-splash.blade.php']) )
       @include('partials.footer.footer-global')
     @elseif( is_page_template('views/template-splash.blade.php') )
