@@ -36,6 +36,7 @@
         {{ get_field('section_2_call_to_action_text') }}
       </a>
     </div>
+    <hr>
   @else
     <hr>
   @endif

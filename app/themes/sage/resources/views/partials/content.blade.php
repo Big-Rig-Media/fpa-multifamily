@@ -5,7 +5,7 @@
         <h6 class="mb-2">
           <a class="text-current no-underline" href="{{ App::url($post) }}">{{ $post->post_title }}</a>
         </h6>
-        <span class="block mb-3 text-sm font-avenirnextmediumitalic text-primary-2">
+        <span class="block mb-3 text-sm font-avenirnextdemiitalic text-primary-2">
           <span>{{ date('F j, Y', strtotime($post->post_date)) }}</span>
           @if( get_field('blog_source_name', $post) )
             •
@@ -15,7 +15,7 @@
         {!! apply_filters('the_content', $post->post_content) !!}
       </div>
       @if( App::url($post) )
-        <a class="ml-auto mr-0 brm-btn brm-btn--primary" href="{{ App::url($post) }}">Read More</a>
+        <a class="ml-auto mr-0 brm-btn brm-btn--primary text-primary-2" href="{{ App::url($post) }}">Read More</a>
       @endif
     </div>
   </div>

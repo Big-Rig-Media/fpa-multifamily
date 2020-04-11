@@ -389,6 +389,26 @@ class App extends Controller
     }
 
     /**
+     * Get cell phone of employee
+     *
+     * @param   object  $employee
+     */
+    public static function employeeCellPhone( $employee )
+    {
+        if ( $employee ) {
+            $phone = get_field('employee_cell_phone', $employee);
+
+            if ( $phone ) {
+                return $phone;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
      * Get fax of employee
      *
      * @param   object  $employee
@@ -459,6 +479,26 @@ class App extends Controller
                 }
 
                 return;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
+     * Get vcard of employee
+     *
+     * @param   object  $employee
+     */
+    public static function vcard( $employee )
+    {
+        if ( $employee ) {
+            $vcard = get_field('employee_vcard', $employee);
+
+            if ( $vcard ) {
+                return $vcard;
             }
 
             return;

@@ -158,13 +158,18 @@
     div:nth-child(2) {
       @apply relative;
 
-      // 1024
-      @media (min-width: 1024px) {
-        &::after {
-          @apply block absolute bg-primary-2;
+      &::after {
+        @apply block absolute bg-primary-2;
 
-          content: "";
+        content: "";
+        bottom: -18px;
+        width: 2px;
+        height: 17px;
+
+        // 1024
+        @media (min-width: 1024px) {
           top: 50%;
+          bottom: initial;
           right: -27px;
           width: 27px;
           height: 2px;

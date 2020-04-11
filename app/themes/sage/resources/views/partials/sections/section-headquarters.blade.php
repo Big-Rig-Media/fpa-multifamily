@@ -9,7 +9,9 @@
               <img src="{{ App::image($office->ID, 'w596x454') }}" alt="{{ $office->post_title }}" />
             @endif
             <h6 class="mt-3 mb-0">{{ $office->post_title }}</h6>
-            <span class="block text-primary-1">FPA Headquarters</span>
+            @if( get_field('office_description', $office->ID) )
+              <span class="block text-primary-1">{{ get_field('office_description', $office->ID) }}</span>
+            @endif
           </div>
         @endforeach
       </div>

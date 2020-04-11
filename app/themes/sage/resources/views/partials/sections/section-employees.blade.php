@@ -57,22 +57,26 @@
                     @if( App::employeePosition($employee) )
                       <span class="block mb-5 text-sm text-primary-1"><em>{{ App::employeePosition($employee) }}</em></span>
                     @endif
-                    @if( TemplateTeam::vcard($employee) )
-                      <a class="md:absolute md:pin-t md:pin-r brm-btn brm-btn--primary" href="{{ TemplateTeam::vcard($employee) }}">Download</a>
+                    @if( App::vcard($employee) )
+                      <a class="md:absolute md:pin-t md:pin-r brm-btn brm-btn--primary" href="{{ App::vcard($employee) }}">Download</a>
                     @endif
                     @if( App::employeeOffice($employee) )
                       <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>
+                    @else
+                      @if( get_field('employee_special_address', $employee->ID) )
+                        <span class="block mb-1">{{ get_field('employee_special_address', $employee->ID) }}</span>
+                      @endif
                     @endif
-                    @if( App::employeePhone($employee) || App::employeeFax($employee) || App::employeeEmail($employee) )
-                      <div class="flex flex-col md:flex-row md:flex-no-wrap md:items-center mb-3">
+                    @if( App::employeePhone($employee) || App::employeeFax($employee) || App::employeeEmail($employee) || App::employeeCellPhone($employee) )
+                      <div class="flex flex-col md:flex-row md:flex-wrap md:items-center mb-3">
                         @if( App::employeePhone($employee) )
-                          <span><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
+                          <span class="inline-block md:mr-1"><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block"></span></span>
                         @endif
-                        @if( App::employeeFax($employee) )
-                          <span class="inline-block md:ml-1"><strong>Fax:</strong> {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
+                        @if( App::employeeCellPhone($employee) )
+                          <span class="inline-block md:mr-1"><strong>Cell:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeeCellPhone($employee)) }}">{{ App::employeeCellPhone($employee) }}</a> <span class="hidden md:inline-block"></span></span>
                         @endif
                         @if( App::employeeEmail($employee) )
-                          <span class="inline-block md:ml-1"><strong>Email:</strong> <a class="text-current no-underline" href="mailto:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
+                          <span class="inline-block md:mr-1"><strong>Email:</strong> <a class="text-current no-underline" href="mailto:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
                         @endif
                       </div>
                     @endif

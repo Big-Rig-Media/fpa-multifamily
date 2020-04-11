@@ -22,6 +22,24 @@
   <section class="brm-section brm-section--dispositions">
     <div class="brm-container brm-container--small">
       @include('partials.sections.section-map-dispositions')
+      <script>
+        const refreshPage = () => {
+          window.location.hash = '#dispositions'
+          window.location.reload(true)
+        }
+      </script>
+      <p class="hidden md:block">Select state above to filter results. <a class="text-black no-underline" href="javascript:void(0)" onclick="refreshPage()">Clear all</a>.</p>
+      @if( $states )
+        <div class="md:hidden">
+          <label class="block mb-3 font-avenirnextmedium" for="state-filter">Filter by State</label>
+          <select id="state-filter" name="state" class="mb-10 js-filter-state">
+            <option value="all">All</option>
+            @foreach( $states as $state )
+              <option value="{{ $state->name }}">{{ $state->name }}</option>
+            @endforeach
+          </select>
+        </div>
+      @endif
       @php
         $colors = [
           'available'                             => [

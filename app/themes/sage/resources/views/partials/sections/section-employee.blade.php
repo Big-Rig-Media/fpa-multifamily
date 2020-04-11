@@ -10,10 +10,22 @@
           alt="{{ $employee->post_title }}"
         />
       @endif
-      <div class="md:flex md:flex-col md:flex-1 p-10 text-white">
+      <div class="md:flex md:flex-col md:flex-1 relative p-8 text-white">
         <h5 class="mb-0 text-white">{{ $employee->post_title }}</h5>
         @if( App::employeePosition($employee) )
-          <span class="block mb-5 text-base">{{ App::employeePosition($employee) }}</span>
+          <span class="block mb-5 text-base"><em>{{ App::employeePosition($employee) }}</em></span>
+        @endif
+        @if( App::vcard($employee) )
+          @php
+            if ( is_page_template(['views/template-acquisitions.blade.php']) ) {
+              $class = 'md:absolute pin-t pin-r mb-5 md:mb-0 brm-btn brm-btn--primary';
+              $style = '';
+            } else {
+              $class = 'md:absolute mb-5 md:mb-0 brm-btn brm-btn--primary';
+              $style = 'top:40px;right:20px';
+            }
+          @endphp
+          <a class="{{ $class }}" href="{{ App::vcard($employee) }}" style="{{ $style }}">Download</a>
         @endif
         @if( App::employeeOffice($employee) )
           <span class="block mb-1">{{ App::employeeOffice($employee) }}</span>
@@ -21,13 +33,13 @@
         @if( App::employeePhone($employee) || App::employeeFax($employee) || App::employeeEmail($employee) )
           <div class="flex flex-col md:flex-row md:flex-no-wrap md:items-center mb-3">
             @if( App::employeePhone($employee) )
-              <span>Phone: <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block">&#124;</span></span>
+              <span class="inline-block md:mr-1"><strong>Phone:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeePhone($employee)) }}">{{ App::employeePhone($employee) }}</a> <span class="hidden md:inline-block"></span></span>
             @endif
-            @if( App::employeeFax($employee) )
-              <span class="inline-block md:ml-1">Fax: {{ App::employeeFax($employee) }} <span class="hidden md:inline-block">&#124;</span></span>
+            @if( App::employeeCellPhone($employee) )
+              <span class="inline-block md:mr-1"><strong>Cell:</strong> <a class="text-current no-underline" href="tel:{{ preg_replace('/[^0-9]/', '', App::employeeCellPhone($employee)) }}">{{ App::employeeCellPhone($employee) }}</a> <span class="hidden md:inline-block"></span></span>
             @endif
             @if( App::employeeEmail($employee) )
-              <span class="inline-block md:ml-1">Email: <a class="text-current no-underline" href="mailt:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
+              <span class="inline-block md:mr-1"><strong>Email:</strong> <a class="text-current no-underline" href="mailt:{{ App::employeeEmail($employee) }}">{{ App::employeeEmail($employee) }}</a></span>
             @endif
           </div>
         @endif

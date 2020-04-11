@@ -56,7 +56,7 @@ let colors = {
   'accent-6': '#892406',
   'accent-7': '#a38242',
 
-  'dana': '#fcd4c7',
+  'dana': '#d08d7b',
   'parker': '#cfb58c',
   'dan': '#a8cfb5',
   'ford': '#8c2105',

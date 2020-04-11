@@ -31,6 +31,23 @@ class TemplateDispositions extends Controller
     }
 
     /**
+     * Get taxonomy terms
+     */
+    public function states()
+    {
+        $states = get_terms([
+            'taxonomy'      => 'dispositions_state',
+            'hide_empty'    => false,
+        ]);
+
+        if ( $states ) {
+            return $states;
+        }
+
+        return;
+    }
+
+    /**
      * Get disposition's city
      *
      * @param   object  $disposition

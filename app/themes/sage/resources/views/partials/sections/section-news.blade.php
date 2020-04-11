@@ -20,7 +20,7 @@
                 {!! apply_filters('the_content', wp_trim_words($post->post_content, 10, '...')) !!}
               </div>
               @if( App::url($post) )
-                <a class="ml-auto mr-0 brm-btn brm-btn--primary" href="{{ App::url($post) }}">Read More</a>
+                <a class="ml-auto mr-0 brm-btn brm-btn--primary text-primary-2" href="{{ App::url($post) }}">Read More</a>
               @endif
             </div>
           </div>

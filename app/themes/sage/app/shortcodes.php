@@ -13,7 +13,7 @@ add_shortcode('employee', function( $atts, $content = null ) {
         'background'    => 'white',
         'align'         => '',
         'width'         => 'max-w-card',
-        'padding'       => 'py-10 px-3'
+        'padding'       => 'py-8 px-3'
     ], $atts));
 
     $query = new \WP_Query([
