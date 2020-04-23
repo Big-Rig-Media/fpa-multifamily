@@ -7,7 +7,7 @@
 @section('content')
 
   <section class="brm-section brm-section--intro">
-    <div class="brm-container">
+    <div class="brm-container brm-container--small">
       <p><strong>{{ get_bloginfo('name', 'display') }}</strong> ("us", "we", or "our") operates {{ preg_replace('/^https?:\/\//', '', get_bloginfo('url', 'display')) }} (the "Site"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.
       </p>
       <p>We use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.</p>
