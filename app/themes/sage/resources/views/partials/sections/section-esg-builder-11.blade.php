@@ -9,7 +9,7 @@
         <ul class="flex flex-row flex-wrap items-center justify-center mt-10 list-reset">
           @foreach( get_sub_field('section_11_builder_gallery') as $gallery_item )
             <li class="mb-5 mx-10 list-none">
-              <img src="{{ $gallery_item['url'] }}"/>
+              <img src="{{ $gallery_item['url'] }}" alt="{{ $gallery_item['alt'] }}" />
             </li>
           @endforeach
         </ul>
@@ -27,7 +27,7 @@
             <div class="mb-5 md:mb-0 text-center">
               <div class="flex flex-col flex-wrap items-center justify-center w-full md:w-auto min-h-logo-card mb-4 md:mb-5 mx-3 py-5 px-5 bg-white shadow">
                 @if( $icon )
-                  <img class="block my-auto" src="{{ $icon['url'] }}" height="81" />
+                  <img class="block my-auto" src="{{ $icon['url'] }}" alt="{{ $icon['alt'] }}" height="81" />
                 @endif
                 @if( $number )
                   <span class="text-5xl text-md:5xl font-poynteroldstyledisplaysemibold leading-none text-primary-2">{!! $number !!}</span>

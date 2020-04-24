@@ -16,7 +16,7 @@
             @endphp
             <div class="flex flex-col flex-wrap items-center w-full md:w-auto mb-4 md:mb-5 mx-4 py-5 px-5 bg-white shadow">
               @if( $icon )
-                <img class="block mb-3" src="{{ $icon['url'] }}" width="67" height="67" />
+                <img class="block mb-3" src="{{ $icon['url'] }}" width="67" height="67" alt="{{ $icon['alt'] }}" />
               @endif
               @if( $number )
                 <span class="text-5xl text-md:5xl font-poynteroldstyledisplaysemibold leading-none text-primary-2 js-increment" data-num="{{ preg_replace('/[^0-9]/', '', strip_tags($number)) }}">{!! $number !!}</span>

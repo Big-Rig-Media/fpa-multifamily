@@ -1,5 +1,5 @@
 @if( have_rows('section_12_builder') )
-  <img src="/app/uploads/2020/03/map.png">
+  <img src="/app/uploads/2020/03/map.png" alt="Map">
   @while( have_rows('section_12_builder') ) @php the_row() @endphp
     @php
       $type = get_sub_field('section_12_builder_type');
@@ -10,7 +10,7 @@
         <ul class="flex flex-row flex-wrap items-center justify-center mt-10 list-reset">
           @foreach( get_sub_field('section_12_builder_gallery') as $gallery_item )
             <li class="mb-5 mx-10 list-none">
-              <img src="{{ $gallery_item['url'] }}"/>
+              <img src="{{ $gallery_item['url'] }}" alt="{{ $gallery_item['alt'] }}" />
             </li>
           @endforeach
         </ul>

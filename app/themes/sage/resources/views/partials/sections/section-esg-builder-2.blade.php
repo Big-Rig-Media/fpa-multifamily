@@ -16,7 +16,7 @@
             @endphp
             <div class="flex flex-col flex-wrap items-center w-full md:w-auto mb-4 md:mb-5 mx-3">
               @if( $icon )
-                <img src="{{ $icon['url'] }}"/>
+                <img src="{{ $icon['url'] }}" alt="{{ $icon['alt'] }}" />
               @endif
               @if( $number )
                 <span class="text-5xl text-md:5xl font-poynteroldstyledisplaysemibold leading-none text-primary-2">{!! $number !!}</span>

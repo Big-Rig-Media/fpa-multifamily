@@ -9,7 +9,7 @@
         <ul class="flex flex-row flex-wrap items-center justify-center mt-10 list-reset">
           @foreach( get_sub_field('section_6_builder_gallery') as $gallery_item )
             <li class="mb-5 mx-10 list-none">
-              <img src="{{ $gallery_item['url'] }}"/>
+              <img src="{{ $gallery_item['url'] }}" alt="{{ $gallery_item['alt'] }}" />
             </li>
           @endforeach
         </ul>

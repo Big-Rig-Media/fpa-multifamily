@@ -9,7 +9,7 @@
         <ul class="flex flex-row flex-wrap items-center justify-center mt-10 list-reset">
           @foreach( get_sub_field('section_7_builder_gallery') as $gallery_item )
             <li class="mb-5 mx-10 list-none">
-              <img src="{{ $gallery_item['url'] }}"/>
+              <img src="{{ $gallery_item['url'] }}" alt="{{ $gallery_item['alt'] }}" />
             </li>
           @endforeach
         </ul>
@@ -51,8 +51,8 @@
         <div class="hidden md:block md:w-px bg-white"></div>
         <div class="md:w-1/3 mt-10 md:mt-0 text-center">
           <span class="block mb-10 text-base text-white uppercase">organizations we support</span>
-          <img class="block mb-5 mx-auto md:ml-0 md:mr-auto" src="/app/uploads/2020/03/habitat-for-humanity.png" />
-          <img class="block mx-auto md:ml-auto md:mr-0" src="/app/uploads/2020/03/boys-girls-clubs-of-america.png" />
+          <img class="block mb-5 mx-auto md:ml-0 md:mr-auto" src="/app/uploads/2020/03/habitat-for-humanity.png" alt="Habitat for Humanity" />
+          <img class="block mx-auto md:ml-auto md:mr-0" src="/app/uploads/2020/03/boys-girls-clubs-of-america.png" alt="Boys and Girls Club of America" />
         </div>
       </div>
     @endif
