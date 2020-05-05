@@ -1,7 +1,7 @@
 <section id="esg-1" class="pb-8 md:pb-16">
   <div class="brm-container brm-container--small">
-    @include('partials.sections.section-esg-builder-1')
     @include('partials.sections.section-esg-builder-2')
+    @include('partials.sections.section-esg-builder-1')
     @include('partials.sections.section-esg-builder-3')
   </div>
 </section>

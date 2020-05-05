@@ -1,3 +1,38 @@
+.slick-arrow {
+  @apply absolute z-50 w-slick-arrow bg-transparent appearance-none;
+
+  top: 40%;
+  transform: translateY(-40%);
+
+  .brm-section--spotlight & {
+    transform: translateY(-90%);
+  }
+}
+
+.slick-prev {
+  @apply pin-l;
+
+  .brm-section--spotlight & {
+    left: 15px;
+
+    @media (min-width: 1024px) {
+      left: 330px;
+    }
+  }
+}
+
+.slick-next {
+  @apply pin-r;
+
+  .brm-section--spotlight & {
+    right: 15px;
+
+    @media (min-width: 1024px) {
+      right: 330px;
+    }
+  }
+}
+
 .slick-dots {
   @apply flex flex-row flex-no-wrap items-start h-slick-dots mb-5 pl-0 border border-solid border-grey-light overflow-hidden rounded-lg;
 

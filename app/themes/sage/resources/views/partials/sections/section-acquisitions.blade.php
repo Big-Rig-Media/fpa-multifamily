@@ -8,9 +8,13 @@
             @if( App::image($acquisition->ID, 'w596x454') )
               <img loading="lazy" src="{{ App::image($acquisition->ID, 'w596x454') }}" alt="{{ $acquisition->post_title }}" />
             @endif
-            <h6 class="mt-3 mb-0">{{ $acquisition->post_title }}</h6>
+            @if( FrontPage::dispositionRegion($acquisition) )
+              <h6 class="mt-3 mb-0">{{ FrontPage::dispositionRegion($acquisition) }}</h6>
+            @else
+              <h6 class="mt-3 mb-0">{{ $acquisition->post_title }}</h6>
+            @endif
             @if( App::capitalization($acquisition) )
-              <span class="block text-primary-1"><strong>Capitalization:</strong> &#36;{{ App::capitalization($acquisition) }}</span>
+              <span class="block text-primary-1"><strong>Capitalization:</strong> &#36;{{ App::capitalization($acquisition) }}M</span>
             @endif
             @if( App::units($acquisition) )
               <span class="block text-primary-1"><strong>Units:</strong> {{ App::units($acquisition) }}</span>

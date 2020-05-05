@@ -10,15 +10,11 @@
       @while(have_posts()) @php the_post() @endphp
         @include('partials.content-page')
       @endwhile
+      @if( get_field('dispositions_employee_spotlight') )
+        @include('partials.sections.section-employee', ['employee' => App::employee(get_field('dispositions_employee_spotlight'))])
+      @endif
     </div>
   </section>
-  @if( get_field('dispositions_employee_spotlight') )
-    <section class="brm-section brm-section--employee">
-      <div class="brm-container brm-container--small">
-        @include('partials.sections.section-employee', ['employee' => App::employee(get_field('dispositions_employee_spotlight'))])
-      </div>
-    </section>
-  @endif
   <section class="brm-section brm-section--dispositions">
     <div class="brm-container brm-container--small">
       @include('partials.sections.section-map-dispositions')
@@ -28,7 +24,7 @@
           window.location.reload(true)
         }
       </script>
-      <p class="hidden md:block">Select state above to filter results. <a class="text-black no-underline" href="javascript:void(0)" onclick="refreshPage()">Clear all</a>.</p>
+      <p class="hidden md:block">Select state above to filter results. <a class="text-black underline" href="javascript:void(0)" onclick="refreshPage()">Reset</a>.</p>
       @if( $states )
         <div class="md:hidden">
           <label class="block mb-3 font-avenirnextmedium" for="state-filter">Filter by State</label>
@@ -55,7 +51,7 @@
             'gradient' => 'linear-gradient(135deg, #f6d6ca 0%, #d7a898 100%)'
           ],
           'sold'                                  => [
-            'color'    => '#335bc0',
+            'color'    => '#1c324f',
             'gradient' => 'linear-gradient(135deg, #335bc0 0%, #121e32 100%)'
           ]
         ];

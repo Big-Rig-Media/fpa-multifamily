@@ -1,5 +1,5 @@
 @if( $employee )
-  <div class="w-full bg-accent-5 shadow">
+  <div class="w-full bg-white shadow">
     <div class="flex flex-col md:flex-row flex-wrap md:flex-no-wrap">
       @if( App::image($employee->ID, 'w162x181') )
         <img
@@ -10,8 +10,8 @@
           alt="{{ $employee->post_title }}"
         />
       @endif
-      <div class="md:flex md:flex-col md:flex-1 relative p-8 text-white">
-        <h5 class="mb-0 text-white">{{ $employee->post_title }}</h5>
+      <div class="md:flex md:flex-col md:flex-1 relative p-8 text-black">
+        <h5 class="mb-0 text-primary-2">{{ $employee->post_title }}</h5>
         @if( App::employeePosition($employee) )
           <span class="block mb-5 text-base"><em>{{ App::employeePosition($employee) }}</em></span>
         @endif

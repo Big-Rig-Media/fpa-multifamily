@@ -214,7 +214,7 @@ class App extends Controller
      */
     public function copyright() {
         return '<p class="mb-3 text-xs font-avenirnextlight">&copy '.date('Y').' '.self::siteName().'. All Rights Reserved &#124; <a class="text-white no-underline" href="'.get_permalink(9).'">ADA Compliance</a> &#124; <a class="text-white no-underline" href="'.get_permalink(3).'">Privacy Policy</a> &#124; Website by <a class="text-current no-underline" href="https://www.bigrigmedia.com/custom-website-development/">Big Rig Media LLC</a> &reg;</p>
-        <p class="text-xs font-avenirnextlight">Investment Advisory Services offered through FPA Real Estate Advisers Group, LLC an afiliate of FPA Multi Family, LLC an SEC Registered Investment Adviser. Please see important <a class="text-current no-underline" href="'.get_permalink(1867).'">disclaimers</a>.</p>';
+        <p class="text-xs font-avenirnextlight">Please see important <a class="text-current no-underline" href="'.get_permalink(1867).'">disclaimers</a>.</p>';
     }
 
     /**
@@ -270,7 +270,7 @@ class App extends Controller
             $capitalization = (int) get_field('capitalization', $object);
 
             if ( $capitalization ) {
-                return number_format($capitalization);
+                return round(number_format($capitalization));
             }
 
             return;

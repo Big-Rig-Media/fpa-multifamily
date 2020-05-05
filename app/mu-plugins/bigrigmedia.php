@@ -143,6 +143,13 @@ class BigRigMedia
         'hierarchical'  => true,
         'parent'        => 'dispositions'
       ],
+      'Dispositions Region' => [
+        'public'        => false,
+        'label'         => 'Region',
+        'url'           => 'region',
+        'hierarchical'  => true,
+        'parent'        => 'dispositions'
+      ],
       'Dispositions State' => [
         'public'        => false,
         'label'         => 'State',
@@ -177,6 +184,13 @@ class BigRigMedia
         'url'           => 'territory',
         'hierarchical'  => true,
         'parent'        => 'employees'
+      ],
+      'Offices Type' => [
+        'public'        => false,
+        'label'         => 'Type',
+        'url'           => 'type',
+        'hierarchical'  => true,
+        'parent'        => 'offices'
       ]
     ];
 

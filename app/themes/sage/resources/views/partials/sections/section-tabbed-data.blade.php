@@ -4,6 +4,7 @@
   $data = $default ? 'tab_data' : 'core_plus_tab_data';
   $number = $default ? 'tab_number' : 'core_plus_tab_number';
   $text = $default ? 'tab_text' : 'core_plus_tab_text';
+  $active = $default ? 'active_tab' : 'core_plus_active_tab';
 @endphp
 @if( have_rows($rows) )
   <div class="tabs">
@@ -12,7 +13,7 @@
       $j = 0;
     @endphp
     @while( have_rows($rows) ) @php the_row() @endphp
-      <div id="{{ strtolower(get_sub_field($caption)) }}" class="flex-col flex-wrap tab {{ $i === 0 ? 'flex is-active' : 'hidden' }}">
+      <div id="{{ strtolower(get_sub_field($caption)) }}" class="flex-col flex-wrap tab {{ $i === (int) get_field($active) ? 'flex is-active' : 'hidden' }}">
         <div class="w-full flex flex-row flex-wrap md:flex-no-wrap md:items-start md:justify-center">
           @if( have_rows($data) )
             @while( have_rows($data) ) @php the_row() @endphp
@@ -28,9 +29,10 @@
     @endwhile
     <div class="flex flex-row flex-no-wrap justify-center w-full md:max-w-half mb-10 md:mt-10 md:mb-0 mx-auto tab-buttons">
       @while( have_rows($rows) ) @php the_row() @endphp
-        <button class="w-1/4 text-center pointer {{ $j === 0 ? 'is-active js-tab-activate' : 'js-tab-activate' }}" data-tab="{{ strtolower(get_sub_field($caption)) }}">{{ get_sub_field($caption) }}</button>
+        <button class="w-1/4 text-center pointer {{ $j === (int) get_field($active) ? 'is-active js-tab-activate' : 'js-tab-activate' }}" data-tab="{{ strtolower(get_sub_field($caption)) }}">{{ get_sub_field($caption) }}</button>
         @php $j++ @endphp
       @endwhile
     </div>
   </div>
+  <p class="mt-10 text-center">Click bar for individual fund stats.</p>
 @endif

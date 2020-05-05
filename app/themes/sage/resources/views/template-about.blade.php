@@ -14,7 +14,7 @@
     </div>
   </section>
   @include('partials.sections.section-headquarters')
-  @include('partials.sections.section-affliates')
+  <!--@include('partials.sections.section-affliates')-->
   @include('partials.sections.section-employee-spotlight')
   @include('partials.sections.section-offices')
 @endsection

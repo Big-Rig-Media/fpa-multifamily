@@ -8,9 +8,13 @@
             @if( App::image($disposition->ID, 'w596x454') )
               <img loading="lazy" src="{{ App::image($disposition->ID, 'w596x454') }}" alt="{{ $disposition->post_title }}" />
             @endif
-            <h6 class="mt-3 mb-0">{{ $disposition->post_title }}</h6>
+            @if( FrontPage::dispositionRegion($disposition) )
+              <h6 class="mt-3 mb-0">{{ FrontPage::dispositionRegion($disposition) }}</h6>
+            @else
+              <h6 class="mt-3 mb-0">{{ $disposition->post_title }}</h6>
+            @endif
             @if( App::capitalization($disposition) )
-              <span class="block text-primary-1"><strong>Capitalization:</strong> &#36;{{ App::capitalization($disposition) }}</span>
+              <span class="block text-primary-1"><strong>Capitalization:</strong> &#36;{{ App::capitalization($disposition) }}M</span>
             @endif
             @if( App::units($disposition) )
               <span class="block text-primary-1"><strong>Units:</strong> {{ App::units($disposition) }}</span>

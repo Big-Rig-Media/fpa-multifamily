@@ -1722,93 +1722,93 @@
     </g>
   </a>
   <text transform="translate(48.94 246.318)">
-    <tspan x="0" y="0" fill="#C27863" class="text-sm">368 Jackson Street</tspan>
+
   </text>
   <text transform="translate(170.875 246.318)" fill="#C27863">
 
   </text>
   <text transform="translate(48.94 268.32)">
-    <tspan x="0" y="0" fill="#C27863" class="text-xl font-avenirnextbold">San Francisco, CA</tspan>
+    <tspan x="0" y="0" fill="#C27863" class="text-xl font-avenirnextbold">FPA Multifamily</tspan>
   </text>
   <text transform="translate(225.928 268.32)" fill="#C27863">
 
   </text>
   <text transform="translate(48.94 287.82)">
-    <tspan x="0" y="0" fill="#C27863" class="text-sm">FPA Multifamily</tspan>
+    <tspan x="0" y="0" fill="#C27863" class="text-sm">San Francisco, CA</tspan>
   </text>
   <text transform="translate(48.94 316.32)">
-    <tspan x="0" y="0" fill="#C27863" class="text-sm">415.925.3100</tspan>
+
   </text>
   <text transform="translate(123.175 342.509)">
-    <tspan x="0" y="0" fill="#82A394" class="text-sm">2082 Michelson Drive, 4th Floor</tspan>
+
   </text>
   <text transform="translate(329.98 342.509)" fill="#82A394">
 
   </text>
   <text transform="translate(123.178 364.509)">
-    <tspan x="0" y="0" fill="#82A394" class="text-xl font-avenirnextbold">Irvine, CA</tspan>
+    <tspan x="0" y="0" fill="#82A394" class="text-xl font-avenirnextbold">Trinity Property Consultants</tspan>
   </text>
   <text transform="translate(221.961 364.509)" fill="#82A394">
 
   </text>
   <text transform="translate(123.178 384.009)">
-    <tspan x="0" y="0" fill="#82A394" class="text-sm">Trinity Property Consultants</tspan>
+    <tspan x="0" y="0" fill="#82A394" class="text-sm">Irvine, CA</tspan>
   </text>
   <text transform="translate(123.178 412.509)">
-    <tspan x="0" y="0" fill="#82A394" class="text-sm">949.399.2500</tspan>
+
   </text>
   <text transform="translate(692.442 199.24)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">1935 S Wabash Ave.</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">Chicago, IL</tspan>
   </text>
   <text transform="translate(824.773 199.24)" fill="#1C3D69">
 
   </text>
   <text transform="translate(692.44 221.237)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Chicago, IL</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Regional Office</tspan>
   </text>
   <text transform="translate(829.268 253.552)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">2101 Wilson Blvd. | Arlington, VA</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">Washington D.C.</tspan>
   </text>
   <text transform="translate(1040.393 253.552)" fill="#1C3D69">
 
   </text>
   <text transform="translate(829.268 275.552)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Washington D.C.</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Regional Office</tspan>
   </text>
   <text transform="translate(590.173 108.476)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">3600 American Boulevard West</tspan>
+
   </text>
   <text transform="translate(794.803 108.476)" fill="#1C3D69">
 
   </text>
   <text transform="translate(590.173 130.476)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Bloomington, MN</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Regional Office</tspan>
   </text>
   <text transform="translate(590.173 158.976)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">720.583.1810</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">Bloomington, MN</tspan>
   </text>
   <text transform="translate(786.268 364.22)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">200 Ashford Center North, Ste. 230</tspan>
+
   </text>
   <text transform="translate(1013.607 364.22)" fill="#1C3D69">
 
   </text>
   <text transform="translate(786.268 386.214)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Atlanta, GA</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Regional Office</tspan>
   </text>
   <text transform="translate(786.268 414.714)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">770.415.1880</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">Atlanta, GA</tspan>
   </text>
   <text transform="translate(529.497 396.804)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">1700 Pacific Avenue Ste. 2440</tspan>
+
   </text>
   <text transform="translate(726.792 396.804)" fill="#1C3D69">
 
   </text>
   <text transform="translate(529.5 418.808)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Dallas, TX</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Regional Office</tspan>
   </text>
   <text transform="translate(529.5 447.308)">
-    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">FPA 214.965.9534 || TPC 214.965.9523</tspan>
+    <tspan x="0" y="0" fill="#1C3D69" class="text-sm">Dallas, TX</tspan>
   </text>
 </svg>

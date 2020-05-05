@@ -12,6 +12,26 @@ use Sober\Controller\Controller;
 class TemplateAbout extends Controller
 {
     /**
+     * Get office description
+     *
+     * @param   object  $office
+     */
+    public static function officeDescription( $office )
+    {
+        if ( $office ) {
+            $description = get_field('office_description', $office);
+
+            if ( $description ) {
+                return $description;
+            }
+
+            return;
+        }
+
+        return;
+    }
+
+    /**
      * Get offices
      */
     public function offices()

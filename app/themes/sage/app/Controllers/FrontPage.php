@@ -11,6 +11,9 @@ use Sober\Controller\Controller;
  */
 class FrontPage extends Controller
 {
+    /**
+     * Get featured acquisitions
+     */
     public function featuredAcquisitions() {
         if ( get_field('featured_acquisitions') ) {
             return get_field('featured_acquisitions');
@@ -19,9 +22,31 @@ class FrontPage extends Controller
         return;
     }
 
+    /**
+     * Get featured dispositions
+     */
     public function featuredDispositions() {
         if ( get_field('featured_dispositions') ) {
             return get_field('featured_dispositions');
+        }
+
+        return;
+    }
+
+    /**
+     * Get disposition region
+     *
+     * @param   object  $disposition
+     */
+    public static function dispositionRegion( $disposition ) {
+        if ( $disposition ) {
+            $terms = get_the_terms($disposition, 'dispositions_region');
+
+            if ( $terms ) {
+                return $terms[0]->name;
+            }
+
+            return;
         }
 
         return;

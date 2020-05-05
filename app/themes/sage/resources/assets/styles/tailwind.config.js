@@ -47,6 +47,7 @@ let colors = {
   'primary-1': '#1c3d69',
   'primary-2': '#a38242',
   'primary-3': '#0f1f33',
+  'primary-4': '#1c324f',
 
   'accent-1': '#afcbb9',
   'accent-2': '#d6c3a5',
@@ -61,6 +62,7 @@ let colors = {
   'dan': '#a8cfb5',
   'ford': '#8c2105',
   'ronak': '#1c3d69',
+  'tedesco': '#f7941d',
 
   'transparent': 'transparent',
 
@@ -575,6 +577,7 @@ module.exports = {
     'full': '100%',
     'screen': '100vw',
     'icon': '17px',
+    'slick-arrow': '30px',
   },
 
 
@@ -614,6 +617,7 @@ module.exports = {
     'screen': '100vh',
     'slick-dots': '6px',
     'icon': '17px',
+    'slick-arrow': '30px',
   },
 
 
@@ -696,6 +700,8 @@ module.exports = {
     'card': '743px',
     'card-modal': '943px',
     'h3-hero': '1027px',
+    'spotlight-image': '162px',
+    'spotlight-content': '500px',
   },
 
 
