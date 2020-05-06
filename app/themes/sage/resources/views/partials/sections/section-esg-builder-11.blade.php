@@ -16,7 +16,7 @@
       @endif
     @elseif( $type === 'card' )
       @if( have_rows('section_11_builder_cards') )
-        <p class="text-center"><strong>FPA is a proud Residential Property Management Advisory Board Member at:</strong></p>
+        <p class="text-center"><strong class="text-primary-1">FPA is a proud Residential Property Management <span class="text-primary-2">Advisory Board Member</span> at:</strong></p>
         <div id="cards-11" class="w-full flex flex-col md:flex-row flex-wrap md:justify-center mb-5">
           @while( have_rows('section_11_builder_cards') ) @php the_row() @endphp
             @php
@@ -49,6 +49,5 @@
         {{ get_field('section_11_call_to_action_text') }}
       </a>
     </div>
-    <hr>
   @endif
 @endif

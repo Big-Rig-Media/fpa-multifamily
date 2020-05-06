@@ -30,11 +30,10 @@
     @endif
   @endwhile
   @if( get_field('section_3_call_to_action_text') && get_field('section_3_call_to_action_url') )
-    <div class="my-8 md:my-16 text-center">
+    <div class="my-8 md:mb-0 text-center">
       <a class="brm-btn brm-btn--primary" href="{{ get_field('section_3_call_to_action_url') }}">
         {{ get_field('section_3_call_to_action_text') }}
       </a>
     </div>
-    <hr>
   @endif
 @endif

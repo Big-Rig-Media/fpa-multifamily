@@ -6,10 +6,12 @@
     @if( $type === 'content' )
       {!! get_sub_field('section_5_builder_content') !!}
       @if( get_sub_field('section_5_builder_gallery') )
-        <ul class="flex flex-row flex-wrap items-center justify-center mt-10 list-reset">
+        <ul class="flex flex-row flex-wrap items-center justify-center mt-10 mb-10 list-reset js-carousel-logos">
           @foreach( get_sub_field('section_5_builder_gallery') as $gallery_item )
-            <li class="mb-5 mx-10 list-none">
-              <img src="{{ $gallery_item['url'] }}" alt="{{ $gallery_item['alt'] }}" />
+            <li class="mx-10 list-none">
+              <div class="flex flex-col items-center justify-center h-full">
+                <img class="block mx-auto" src="{{ $gallery_item['url'] }}" alt="{{ $gallery_item['alt'] }}" />
+              </div>
             </li>
           @endforeach
         </ul>
@@ -40,12 +42,9 @@
   @endwhile
   @if( get_field('section_5_call_to_action_text') && get_field('section_5_call_to_action_url') )
     <div class="my-8 md:my-16 text-center">
-      <a class="brm-btn brm-btn--primary" href="{{ get_field('section_5_call_to_action_url') }}">
+      <a class="brm-btn brm-btn--tertiary" href="{{ get_field('section_5_call_to_action_url') }}">
         {{ get_field('section_5_call_to_action_text') }}
       </a>
     </div>
-    <hr>
-  @else
-    <hr>
   @endif
 @endif

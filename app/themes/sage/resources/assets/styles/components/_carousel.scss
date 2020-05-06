@@ -31,6 +31,24 @@
   }
 }
 
+.carousel-grid--logos {
+  // 1024
+  @media (min-width: 1024px) {
+    &::before,
+    &::after {
+      width: 25%;
+    }
+
+    &::before {
+      background: linear-gradient(90deg, rgba(28, 61, 105, 1) 50%, rgba(28, 61, 105, 0.5) 100%);
+    }
+
+    &::after {
+      background: linear-gradient(90deg, rgba(28, 61, 105, 0.5) 50%, rgba(28, 61, 105, 1) 100%);
+    }
+  }
+}
+
 .carousel-grid--offices {
   // 1024
   @media (min-width: 1024px) {

@@ -1,5 +1,4 @@
 @if( have_rows('section_12_builder') )
-  <img src="/app/uploads/2020/03/map.png" alt="Map">
   @while( have_rows('section_12_builder') ) @php the_row() @endphp
     @php
       $type = get_sub_field('section_12_builder_type');
@@ -45,11 +44,10 @@
     @endif
   @endwhile
   @if( get_field('section_12_call_to_action_text') && get_field('section_12_call_to_action_url') )
-    <div class="my-8 md:my-16 text-center">
+    <div class="my-8 md:mb-0 text-center">
       <a class="brm-btn brm-btn--primary" href="{{ get_field('section_12_call_to_action_url') }}">
         {{ get_field('section_12_call_to_action_text') }}
       </a>
     </div>
-    <hr>
   @endif
 @endif

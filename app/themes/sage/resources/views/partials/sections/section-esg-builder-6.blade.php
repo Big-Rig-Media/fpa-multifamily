@@ -54,12 +54,9 @@
   @endwhile
   @if( get_field('section_6_call_to_action_text') && get_field('section_6_call_to_action_url') )
     <div class="my-8 md:my-16 text-center">
-      <a class="brm-btn brm-btn--primary" href="{{ get_field('section_6_call_to_action_url') }}">
+      <a class="brm-btn brm-btn--tertiary" href="{{ get_field('section_6_call_to_action_url') }}">
         {{ get_field('section_6_call_to_action_text') }}
       </a>
     </div>
-    <hr>
-  @else
-    <hr>
   @endif
 @endif
