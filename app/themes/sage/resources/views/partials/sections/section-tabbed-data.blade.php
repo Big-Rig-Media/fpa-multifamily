@@ -34,5 +34,5 @@
       @endwhile
     </div>
   </div>
-  <p class="mt-10 text-center">Click bar for individual fund stats.</p>
+  <p class="mt-10 text-center">Click Bar for Individual Stats.</p>
 @endif

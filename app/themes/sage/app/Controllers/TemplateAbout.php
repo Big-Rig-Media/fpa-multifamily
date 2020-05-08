@@ -88,7 +88,7 @@ class TemplateAbout extends Controller
             $zipcode = get_field('zipcode', $office) ?: null;
 
             if ( $address1 || $address2 || $city || $state || $zipcode ) {
-                return $address1 . ' ' . $address2 . '<br>' . $city . ', ' . $state . ' ' . $zipcode;
+                return $address1 . ' ' . $address2 . '<br><strong>' . $city . ', ' . $state . '</strong> ';
             }
 
             return;

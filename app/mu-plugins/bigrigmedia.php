@@ -73,7 +73,7 @@ class BigRigMedia
     ]);
 
     register_post_type('dispositions', [
-      'label'                 => 'Dispositions',
+      'label'                 => 'Acquisitions / Dispositions',
       'public'                => false,
       'publicly_queryable'    => false,
       'show_ui'               => true,

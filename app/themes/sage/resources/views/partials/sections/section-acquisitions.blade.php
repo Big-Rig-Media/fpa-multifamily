@@ -6,7 +6,7 @@
         @foreach( $acquisitions as $acquisition )
           <div class="mb-5 px-1">
             @if( App::image($acquisition->ID, 'w596x454') )
-              <img loading="lazy" src="{{ App::image($acquisition->ID, 'w596x454') }}" alt="{{ $acquisition->post_title }}" />
+              <img src="{{ App::image($acquisition->ID, 'w596x454') }}" alt="{{ $acquisition->post_title }}" />
             @endif
             @if( FrontPage::dispositionRegion($acquisition) )
               <h6 class="mt-3 mb-0">{{ FrontPage::dispositionRegion($acquisition) }}</h6>

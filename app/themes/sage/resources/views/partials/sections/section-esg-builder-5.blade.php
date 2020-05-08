@@ -8,7 +8,7 @@
       @if( get_sub_field('section_5_builder_gallery') )
         <ul class="flex flex-row flex-wrap items-center justify-center mt-10 mb-10 list-reset js-carousel-logos">
           @foreach( get_sub_field('section_5_builder_gallery') as $gallery_item )
-            <li class="mx-10 list-none">
+            <li class="mx-16 list-none">
               <div class="flex flex-col items-center justify-center h-full">
                 <img class="block mx-auto" src="{{ $gallery_item['url'] }}" alt="{{ $gallery_item['alt'] }}" />
               </div>
@@ -41,7 +41,7 @@
     @endif
   @endwhile
   @if( get_field('section_5_call_to_action_text') && get_field('section_5_call_to_action_url') )
-    <div class="my-8 md:my-16 text-center">
+    <div class="my-8 text-center">
       <a class="brm-btn brm-btn--tertiary" href="{{ get_field('section_5_call_to_action_url') }}">
         {{ get_field('section_5_call_to_action_text') }}
       </a>

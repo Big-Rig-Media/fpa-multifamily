@@ -1757,7 +1757,7 @@
   <text transform="translate(123.178 412.509)">
 
   </text>
-  <text transform="translate(692.442 199.24)">
+  <text transform="translate(692.442 245.24)">
     <tspan x="0" y="0" fill="#1C3D69" class="text-sm">Chicago, IL</tspan>
   </text>
   <text transform="translate(824.773 199.24)" fill="#1C3D69">
@@ -1766,7 +1766,7 @@
   <text transform="translate(692.44 221.237)">
     <tspan x="0" y="0" fill="#1C3D69" class="text-xl font-avenirnextbold">Regional Office</tspan>
   </text>
-  <text transform="translate(829.268 253.552)">
+  <text transform="translate(829.268 305.552)">
     <tspan x="0" y="0" fill="#1C3D69" class="text-sm">Washington D.C.</tspan>
   </text>
   <text transform="translate(1040.393 253.552)" fill="#1C3D69">
