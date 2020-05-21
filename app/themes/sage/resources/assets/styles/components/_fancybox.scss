@@ -26,3 +26,24 @@
 .fancybox-bg {
   background: rgb(255, 255, 255);
 }
+
+// Navigation Button
+.fancybox-button {
+  @apply text-primary-2 bg-transparent;
+
+  padding: 0 !important;
+
+  // Hover
+  @media (hover: hover) {
+    &:hover {
+      @apply text-primary-2;
+    }
+  }
+
+  svg {
+    path {
+      fill: none;
+      stroke-width: initial;
+    }
+  }
+}

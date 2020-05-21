@@ -68,7 +68,8 @@ class FrontPage extends Controller
                     'terms'    => 'yes',
                     'operator' => 'IN'
                 ]
-            ]
+            ],
+            'orderby'           => 'post__in'
         ]);
 
         if ( $query->have_posts() ) {
@@ -94,7 +95,8 @@ class FrontPage extends Controller
                     'terms'    => 'no',
                     'operator' => 'IN'
                 ]
-            ]
+            ],
+            'orderby'           => 'post__in'
         ]);
 
         if ( $query->have_posts() ) {

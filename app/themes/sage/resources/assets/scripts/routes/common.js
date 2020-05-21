@@ -128,6 +128,12 @@ export default {
     // Enable fancybox
     $('[data-fancybox]').fancybox({
       autoFocus: false,
+      btnTpl: {
+        arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.842 69.374" height="40"><path fill="none" stroke="#a38242" stroke-width="2" d="M23 .538L1.187 34.687 23 68.836"/></svg></button>',
+        arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.842 69.374" height="40"><path fill="none" stroke="#a38242" stroke-width="2" d="M1.187.538L23 34.687 1.187 68.836"/></svg></button>',
+      },
+      buttons: ['close'],
+      infobar: false,
       smallBtn: false,
       toolbar: true,
     });

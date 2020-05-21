@@ -27,7 +27,7 @@
         @endforeach
       </div>
       <div class="text-center">
-          <a class="brm-btn brm-btn--primary" href="{{ get_permalink(34) }}">Meet the Whole Team</a>
+          <a class="brm-btn brm-btn--primary" href="{{ get_permalink(34) }}">Meet the Team</a>
       </div>
     </div>
   </section>

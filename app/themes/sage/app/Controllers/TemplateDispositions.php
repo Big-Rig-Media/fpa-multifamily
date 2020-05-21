@@ -247,6 +247,8 @@ class TemplateDispositions extends Controller
             $query = new \WP_Query([
                 'post_type'         => 'dispositions',
                 'posts_per_page'    => -1,
+                'orderby'           => 'post_date',
+                'order'             => 'DESC',
                 'tax_query'         => [
                     'relation'     => 'AND',
                     [

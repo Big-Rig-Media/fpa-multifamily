@@ -5,7 +5,7 @@
       <div class="-mx-base md:-mx-1 carousel-grid js-carousel-offices">
         @foreach( $offices as $office )
           <div class="px-1">
-            @if( App::image($office->ID, 'w596x454') && TemplateAbout::address($office) )
+            @if( App::image($office->ID, 'w596x454') )
               <img src="{{ App::image($office->ID, 'w596x454') }}" alt="{{ $office->post_title }}" />
             @endif
             @if( TemplateAbout::officeDescription($office) )
@@ -13,8 +13,8 @@
             @else
               <h6 class="mt-3 mb-0">{{ $office->post_title }}</h6>
             @endif
-            @if( TemplateAbout::formatAddress($office) )
-              <span class="block text-primary-1">{!! TemplateAbout::formatAddress($office) !!}</span>
+            @if( TemplateAbout::simpleLocation($office) )
+              <span class="block text-primary-1">{!! TemplateAbout::simpleLocation($office) !!}</span>
             @endif
             @if( TemplateAbout::phone($office) )
               <span class="block mt-2 text-primary-1">

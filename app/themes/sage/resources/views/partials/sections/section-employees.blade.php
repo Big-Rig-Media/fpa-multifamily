@@ -6,7 +6,7 @@
           <div>
             @if( App::image($employee->ID, 'w246x272') )
               @if( $employee->post_content )
-                <a href="#{{ $employee->post_name }}" data-fancybox>
+                <a href="#{{ $employee->post_name }}" data-fancybox="employees">
                   <img
                     class="border border-solid border-primary-2 rounded-team-card"
                     loading="lazy"
